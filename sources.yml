@@ -1,0 +1,217 @@
+# Watchlist for the agent-harness ecosystem. Snapshot 2026-09.
+# Intended as input to a weekly digest script (see docs/monitoring.md), or just as a bookmark list.
+# layer: runtime | config | curation | eval | infra
+
+github_repos:
+  # Layer 1: runtimes
+  - repo: badlogic/pi-mono
+    layer: runtime
+    watch: [releases, discussions]
+    note: Minimal self-extensible harness; pi packages; author publishes sessions to HF.
+  - repo: can1357/oh-my-pi
+    layer: runtime
+    watch: [releases]
+    note: Fast-moving pi fork, coding-first, ~80k weekly npm downloads (2026-08).
+  - repo: SWE-agent/mini-swe-agent
+    layer: runtime
+    watch: [releases]
+    note: 100-line bash-only baseline; control arm for any comparison.
+  - repo: SWE-agent/SWE-agent
+    layer: runtime
+    watch: [releases]
+  - repo: OpenHands/OpenHands
+    layer: runtime
+    watch: [releases]
+  - repo: sst/opencode
+    layer: runtime
+    watch: [releases]
+  - repo: block/goose
+    layer: runtime
+    watch: [releases]
+
+  # Layer 3: eval infrastructure and benchmarks
+  - repo: harbor-framework/harbor
+    layer: infra
+    watch: [releases]
+    note: Runner behind Terminal-Bench; BaseAgent / BaseInstalledAgent for custom harnesses.
+  - repo: harbor-framework/terminal-bench-2-1
+    layer: eval
+    watch: [releases, pulls]
+    note: Watch for successor repos (TB 3.x, 4.x) and submission-window changes.
+  - repo: Qihoo360/harness-bench
+    layer: eval
+    watch: [releases]
+    note: Fixed-model, vary-harness; 6 harnesses x 8 models x 106 tasks.
+  - repo: opensquilla/claw-swe-bench
+    layer: eval
+    watch: [releases, pulls]
+    note: Harness-neutral SWE-bench adapter; leaderboard at claw-swe-bench.github.io.
+  - repo: princeton-pli/hal-harness
+    layer: infra
+    watch: [releases]
+    note: Cost-aware eval harness; leaderboard paused for new models.
+  - repo: reacher-z/HarnessBench
+    layer: eval
+    watch: [commits]
+    note: WIP fixed-model harness board for everyday online tasks.
+  - repo: nyosegawa/harness-bench
+    layer: eval
+    watch: [commits]
+    note: Real-repo debugging tasks targeting Codex / Claude Code / Cursor / Antigravity; results pending.
+  - repo: namanvats/scaffold-effects
+    layer: eval
+    watch: [commits]
+    note: Data and scripts for The Scaffold Effect paper.
+
+  # Layer 3: curation
+  - repo: nexu-io/harness-engineering-guide
+    layer: curation
+    watch: [discussions]
+    note: Closest thing to a forum for harness engineering.
+  - repo: Turi-Labs/awesome-harness
+    layer: curation
+    watch: [commits]
+  - repo: Lijunjie2/awesome-agent-harness
+    layer: curation
+    watch: [commits]
+  - repo: Picrew/awesome-agent-harness
+    layer: curation
+    watch: [commits]
+
+  # Layer 2: config-layer hubs
+  - repo: sadsfae/awesome-claude-code
+    layer: config
+    watch: [commits]
+  - repo: Chat2AnyLLM/awesome-claude-plugins
+    layer: config
+    watch: [commits]
+    note: Tracks ~190 Claude Code plugin marketplaces.
+  - repo: sergeykrin9/awesome-claude-code-workflows
+    layer: config
+    watch: [commits]
+  - repo: BioInfo/claudelicious
+    layer: config
+    watch: [commits]
+    note: Example of publishing a whole harness with reasoning.
+  - repo: hgflima/harness-lab
+    layer: config
+    watch: [releases]
+  - repo: madebywild/agent-harness
+    layer: config
+    watch: [releases]
+  - repo: ar27111994/agent-harness
+    layer: config
+    watch: [releases]
+  - repo: eooo-io/orkestr
+    layer: config
+    watch: [releases]
+
+github_topics:
+  - harness-engineering
+  - agent-harness
+  - pi-package
+  - claude-code-plugin
+  - coding-agent
+
+github_repo_searches:
+  # append pushed:>YYYY-MM-DD for the last 7 days
+  - 'topic:harness-engineering'
+  - 'topic:agent-harness'
+  - 'topic:pi-package'
+  - '"agent harness" in:description,readme stars:>20'
+  - '"harness" "coding agent" in:readme created:>2026-01-01'
+  - '"harness card" in:readme'
+
+github_code_searches:
+  - 'path:.claude/skills filename:SKILL.md'
+  - 'filename:AGENTS.md "harness"'
+  - 'path:.pi/ extension:ts'
+  - 'path:.cursor/rules'
+  - '"BaseInstalledAgent" language:Python'
+  - '"BaseClawAdapter" language:Python'
+
+npm_keywords:
+  - pi-package
+  - harness-engineering
+  - agent-harness
+  - claude-code-plugin
+
+pypi_release_feeds:
+  - https://pypi.org/rss/project/mini-swe-agent/releases.xml
+  - https://pypi.org/rss/project/harbor/releases.xml
+  - https://pypi.org/rss/project/openhands-sdk/releases.xml
+
+arxiv_queries:
+  - 'abs:"agent harness"'
+  - 'abs:"harness" AND abs:"coding agent"'
+  - 'abs:"scaffold" AND (abs:"SWE-bench" OR abs:"Terminal-Bench")'
+  - 'abs:"harness card"'
+  - 'abs:"fixed model" AND abs:"harness"'
+
+arxiv_anchor_papers:
+  # follow forward citations via Semantic Scholar
+  - id: 2510.11977
+    title: Holistic Agent Leaderboard (HAL)
+  - id: 2605.23950
+    title: Stop Comparing LLM Agents Without Disclosing the Harness
+  - id: 2605.27922
+    title: Harness-Bench
+  - id: 2606.12344
+    title: Claw-SWE-Bench
+  - id: 2607.22585
+    title: The Scaffold Effect in Coding Agents
+  - id: 2609.20804
+    title: An Empirical Study of Harness Design for Coding Agents
+
+huggingface:
+  datasets:
+    - harborframework/terminal-bench-2.0
+    - TokenRhythm/Claw-SWE-Bench
+    - badlogicgames/pi-mono
+  search_terms:
+    - terminal-bench
+    - swe-bench
+    - agent-trajectories
+    - pi-share-hf
+
+leaderboards:
+  - name: Terminal-Bench
+    url: https://www.tbench.ai/leaderboard
+    axis: vary model, harness disclosed per entry
+  - name: Harness-Bench
+    url: https://www.harness-bench.ai/leaderboard.html
+    axis: fixed protocol, model x harness pairs
+  - name: Claw-SWE-Bench
+    url: https://claw-swe-bench.github.io/
+    axis: harness as controlled variable on SWE-bench
+  - name: HAL
+    url: https://hal.cs.princeton.edu/
+    axis: cost-aware; paused for new models
+  - name: SWE-bench bash-only
+    url: https://www.swebench.com/
+    axis: fixed harness (mini-swe-agent), vary model
+
+blogs_and_posts:
+  - https://www.anthropic.com/engineering/infrastructure-noise
+  - https://www.thedeepfeed.ai/posts/2026-06-22-how-much-is-the-harness-worth-measuring-agent-scaffolds/
+  - https://harness-guide.com
+  - https://www.tbench.ai/news
+
+chat:
+  - name: oh-my-pi Discord
+    via: link in README of can1357/oh-my-pi
+  - name: OpenCode Discord
+    via: link in README of sst/opencode
+  - name: Goose Discord
+    via: link in README of block/goose
+  - name: OpenHands Slack
+    via: link in README of OpenHands/OpenHands
+  - name: SWE-bench Slack
+    via: link on swebench.com
+
+x_search_terms:
+  - '"harness engineering"'
+  - '"agent harness"'
+  - '"scaffold effect"'
+  - '"harness card"'
+  - 'terminal-bench harness'
