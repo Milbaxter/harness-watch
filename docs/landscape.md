@@ -1,5 +1,7 @@
 # The landscape
 
+For the current prioritized map, concrete design PRs, and activity caveats, read the **[22 September hotspot audit](hotspots-2026-09-22.md)**. Older numerical benchmark claims below were not all revalidated by that audit.
+
 The word "harness" is used for three different things. The people working on each layer mostly do not read each other. Knowing which layer you care about tells you where to look.
 
 ```
@@ -22,17 +24,17 @@ These are the projects where the loop, tools, context policy and stop conditions
 
 | Project | Why it matters | Where the iteration happens |
 |---|---|---|
-| [pi-mono](https://github.com/badlogic/pi-mono) (Mario Zechner) | Deliberately minimal, self-extensible harness. Community ships extensions/skills/prompts/themes as [pi packages](https://pi.dev/docs/latest/packages) via npm or git. Author publishes his raw work sessions to Hugging Face (`badlogicgames/pi-mono`), one of very few people sharing trajectories rather than configs. | GitHub issues/PRs, RFCs in-repo, [pi.dev package registry](https://pi.dev/packages?type=extension), X |
+| [pi-mono](https://github.com/earendil-works/pi) (Mario Zechner) | Deliberately minimal, self-extensible harness. Community ships extensions/skills/prompts/themes as [pi packages](https://pi.dev/docs/latest/packages) via npm or git. Author publishes his raw work sessions to Hugging Face (`badlogicgames/pi-mono`), one of very few people sharing trajectories rather than configs. | GitHub issues/PRs, RFCs in-repo, [pi.dev package registry](https://pi.dev/packages?type=extension), X |
 | [oh-my-pi](https://github.com/can1357/oh-my-pi) (Can Boluk) | Fork of pi, coding-first, moves faster: LSP integration, subagents, pluggable memory backends, browser relay. ~80k weekly npm downloads for `@oh-my-pi/pi-coding-agent` as of 2026-08. Inherits `.claude`, `.cursor`, `.codex` etc. configs on first run. | GitHub, Discord (linked from README), community extension repos (e.g. `omp-discord`) |
 | [mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent) / [SWE-agent](https://github.com/SWE-agent/SWE-agent) (Princeton / Stanford) | ~100-line bash-only baseline scoring >74% on SWE-bench Verified. The harness everyone ablates against; also the harness behind the SWE-bench "bash only" leaderboard (fixed harness, vary model). | GitHub, papers, SWE-bench Slack |
 | [OpenHands](https://github.com/OpenHands/OpenHands) | Production-grade, Docker-sandboxed, best-documented internal design (context condensation, prompt-injection mitigation, `openhands-sdk`). | GitHub, Slack, docs |
-| [OpenCode](https://github.com/sst/opencode) | Popular TUI agent, provider-agnostic, large plugin surface. | GitHub, Discord |
-| [Goose](https://github.com/block/goose) (Block) | Extensible desktop/CLI agent with MCP-first tooling. | GitHub, Discord |
+| [OpenCode](https://github.com/anomalyco/opencode) | Popular TUI agent, provider-agnostic, large plugin surface. | GitHub, Discord |
+| [Goose](https://github.com/aaif-goose/goose) (Block) | Extensible desktop/CLI agent with MCP-first tooling. | GitHub, Discord |
 | "Claw" family: OpenClaw, NanoBot (HKUDS), Hermes (Nous Research), ZeroClaw, NullClaw, Moltis | General-purpose personal-assistant runtimes (not coding-first). Relevant because the first fixed-model harness benchmarks target exactly this family. | GitHub |
 
-## Layer 2: Config layer on closed CLIs
+## Layer 2: Config and workflow layers
 
-Claude Code, Codex CLI and Cursor are closed harnesses, but their behaviour is heavily shaped by user-supplied files. This layer is enormous and shallow: thousands of repos, almost no shared evaluation.
+Claude Code and Cursor expose user-configurable behavior. [Codex CLI](https://github.com/openai/codex) is itself open source, and also supports user-supplied configuration. This layer is enormous and shallow: thousands of repos, almost no shared evaluation.
 
 | Hub | What it is |
 |---|---|
@@ -50,7 +52,7 @@ Claude Code, Codex CLI and Cursor are closed harnesses, but their behaviour is h
 | [Turi-Labs/awesome-harness](https://github.com/Turi-Labs/awesome-harness) | Curated, includes eval and infra-noise references. |
 | [Lijunjie2/awesome-agent-harness](https://github.com/Lijunjie2/awesome-agent-harness) | Implementation-first, 120+ entries, EN/ZH. |
 | [Picrew/awesome-agent-harness](https://github.com/Picrew/awesome-agent-harness) | Overlapping list, includes meta-harnesses (Omnigent). |
-| [nexu-io/harness-engineering-guide](https://github.com/nexu-io/harness-engineering-guide) ([harness-guide.com](https://harness-guide.com)) | Structured guide (loop, tools, memory, guardrails, eval infra) with **active GitHub Discussions**, the closest thing to a forum for the topic. |
+| [nexu-io/harness-engineering-guide](https://github.com/nexu-io/harness-engineering-guide) ([harness-guide.com](https://harness-guide.com)) | Structured guide (loop, tools, memory, guardrails, eval infra) with GitHub Discussions enabled. Discussion activity and central-forum status were not verified; the repository last-push date observed on September 22 was April 19. |
 | Anthropic engineering blog | [Quantifying infrastructure noise in agentic coding evals](https://www.anthropic.com/engineering/infrastructure-noise) and related posts are primary sources for eval methodology. |
 | [thedeepfeed.ai: Measuring the agent harness](https://www.thedeepfeed.ai/posts/2026-06-22-how-much-is-the-harness-worth-measuring-agent-scaffolds/) | Best single synthesis of the 2026 harness-effect papers. |
 

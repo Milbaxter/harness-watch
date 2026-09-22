@@ -4,14 +4,14 @@
 
 github_repos:
   # Layer 1: runtimes
-  - repo: badlogic/pi-mono
+  - repo: earendil-works/pi
     layer: runtime
     watch: [releases, discussions]
     note: Minimal self-extensible harness; pi packages; author publishes sessions to HF.
   - repo: can1357/oh-my-pi
     layer: runtime
     watch: [releases]
-    note: Fast-moving pi fork, coding-first, ~80k weekly npm downloads (2026-08).
+    note: Active coding-oriented pi fork; tool interfaces, memory, debugging and subagents.
   - repo: SWE-agent/mini-swe-agent
     layer: runtime
     watch: [releases]
@@ -22,12 +22,206 @@ github_repos:
   - repo: OpenHands/OpenHands
     layer: runtime
     watch: [releases]
-  - repo: sst/opencode
+  - repo: anomalyco/opencode
     layer: runtime
     watch: [releases]
-  - repo: block/goose
+  - repo: aaif-goose/goose
     layer: runtime
     watch: [releases]
+
+  # Added by the 2026-09-22 hotspot audit; priority is editorial, not a benchmark score.
+  - repo: PrimeIntellect-ai/prime-agent
+    layer: runtime
+    priority: high
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Persistent Python/RLM control and continual harness state; start with Discussions."
+  - repo: PrimeIntellect-ai/verifiers
+    layer: eval
+    priority: high
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Evaluation and RL environments adjacent to Prime Agent."
+  - repo: deepseek-ai/deepseek-harness
+    layer: runtime
+    priority: high
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Plugin-first runtime; developer preview; use Discussions and dsh-plugin topic."
+  - repo: weijiafu14/pi2dsh
+    layer: config
+    priority: high
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Pi extension compatibility on DSH; inspect versioned evidence matrix."
+  - repo: mitsuhiko/agent-stuff
+    layer: config
+    priority: high
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "Armin's working Pi package: skills, extensions and prompt commands."
+  - repo: davebcn87/pi-autoresearch
+    layer: config
+    priority: medium
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "Pi extension for iterative measured experiments."
+  - repo: TannerMidd/SpecPi
+    layer: config
+    priority: medium
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "Small explicit workflow and scope-control harness around Pi."
+  - repo: fitchmultz/pi-tool-duration
+    layer: config
+    priority: medium
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "Model-visible tool duration feedback."
+  - repo: code-yeongyu/oh-my-openagent
+    layer: config
+    priority: high
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Cross-host orchestration; Sustainable Use License, source-available rather than permissive OSS."
+  - repo: NousResearch/hermes-agent
+    layer: runtime
+    priority: high
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "Persistent personal agent, skills, memory and plugin lifecycle."
+  - repo: NousResearch/hermes-agent-self-evolution
+    layer: eval
+    priority: reference
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "GEPA-based evolution reference; last observed push 2026-06-17."
+  - repo: langchain-ai/deepagents
+    layer: runtime
+    priority: high
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Composable harness plus examples/better-harness optimization experiment."
+  - repo: OpenHands/software-agent-sdk
+    layer: runtime
+    priority: high
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "Core SDK, context/execution infrastructure and profile routing."
+  - repo: gepa-ai/gepa
+    layer: eval
+    priority: high
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Reflective optimization of textual system components."
+  - repo: stanford-iris-lab/meta-harness
+    layer: eval
+    priority: high
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "Automated search over task-specific harness code and linked applications."
+  - repo: airbnb/agent-harness-optimizer
+    layer: eval
+    priority: medium
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "Prompt and middleware optimization; small research implementation, not established community."
+  - repo: gastownhall/gascity
+    layer: infra
+    priority: high
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Composable supervision and orchestration from Gas Town infrastructure."
+  - repo: gastownhall/gastown
+    layer: infra
+    priority: medium
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Multi-agent workspace orchestration."
+  - repo: gastownhall/beads
+    layer: infra
+    priority: high
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Durable work state for agents."
+  - repo: obra/superpowers
+    layer: config
+    priority: high
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "Skills-based development workflow and verification."
+  - repo: open-gsd/gsd-core
+    layer: config
+    priority: high
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Active successor explicitly linked by archived get-shit-done repository."
+  - repo: openai/codex
+    layer: runtime
+    priority: medium
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Open-source Codex CLI implementation; distinct from hosted product components."
+  - repo: google-gemini/gemini-cli
+    layer: runtime
+    priority: medium
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Open-source Gemini terminal agent."
+  - repo: mistralai/mistral-vibe
+    layer: runtime
+    priority: medium
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Mistral CLI agent."
+  - repo: cline/cline
+    layer: runtime
+    priority: medium
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "SDK, CLI and editor agent surfaces."
+  - repo: Kilo-Org/kilocode
+    layer: runtime
+    priority: medium
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Coding agent platform and editor/runtime integrations."
+  - repo: openclaw/openclaw
+    layer: runtime
+    priority: medium
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "Personal-agent ecosystem; inspect component licenses."
+  - repo: nanocoai/nanoclaw
+    layer: runtime
+    priority: medium
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Container-oriented personal agent; canonical successor to qwibitai path."
+  - repo: HKUDS/nanobot
+    layer: runtime
+    priority: medium
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Lightweight personal-agent runtime."
+  - repo: agentclientprotocol/agent-client-protocol
+    layer: infra
+    priority: medium
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Editor-to-agent interoperability."
+  - repo: agentskills/agentskills
+    layer: infra
+    priority: medium
+    watch: [releases, pulls, discussions]
+    verified_on: 2026-09-22
+    note: "Portable Agent Skills specification."
+  - repo: Flesymeb/HarnessOfHarness
+    layer: eval
+    priority: watch
+    watch: [releases, pulls]
+    verified_on: 2026-09-22
+    note: "Research/demos; README says lightweight reusable implementation is coming soon."
 
   # Layer 3: eval infrastructure and benchmarks
   - repo: harbor-framework/harbor
@@ -67,7 +261,7 @@ github_repos:
   - repo: nexu-io/harness-engineering-guide
     layer: curation
     watch: [discussions]
-    note: Closest thing to a forum for harness engineering.
+    note: Curation reference; central-forum status unverified; repo last pushed 2026-04-19.
   - repo: Turi-Labs/awesome-harness
     layer: curation
     watch: [commits]
@@ -112,12 +306,14 @@ github_topics:
   - pi-package
   - claude-code-plugin
   - coding-agent
+  - dsh-plugin
 
 github_repo_searches:
   # append pushed:>YYYY-MM-DD for the last 7 days
   - 'topic:harness-engineering'
   - 'topic:agent-harness'
   - 'topic:pi-package'
+  - 'topic:dsh-plugin'
   - '"agent harness" in:description,readme stars:>20'
   - '"harness" "coding agent" in:readme created:>2026-01-01'
   - '"harness card" in:readme'
@@ -132,6 +328,7 @@ github_code_searches:
 
 npm_keywords:
   - pi-package
+  - dsh-plugin
   - harness-engineering
   - agent-harness
   - claude-code-plugin
@@ -201,9 +398,9 @@ chat:
   - name: oh-my-pi Discord
     via: link in README of can1357/oh-my-pi
   - name: OpenCode Discord
-    via: link in README of sst/opencode
+    via: link in README of anomalyco/opencode
   - name: Goose Discord
-    via: link in README of block/goose
+    via: link in README of aaif-goose/goose
   - name: OpenHands Slack
     via: link in README of OpenHands/OpenHands
   - name: SWE-bench Slack

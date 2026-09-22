@@ -2,7 +2,11 @@
 
 How to stay on top of the open-source **agent harness** ecosystem, and how to tell whether one harness is actually better than another.
 
-> A *harness* is everything around the model: the agent loop, tool set, context/memory management, permission model, retry/stop logic, sandbox, and the prompt/config layer (`AGENTS.md`, skills, hooks, plugins). In 2026 the harness accounts for as much score variance on agentic coding benchmarks as the model does, and nobody has a shared vocabulary or venue for it yet. This repo is a map and a method, not a catalog.
+> A *harness* is everything around the model: the agent loop, tool set, context/memory management, permission model, retry/stop logic, sandbox, and the prompt/config layer (`AGENTS.md`, skills, hooks, plugins). Harness choices can materially change agent behavior and measured performance; the effects depend on the model, tasks, tools, and evaluation protocol. This repo is a map and a method, not a catalog.
+
+## Latest field research
+
+**[Development hotspots — 22 September 2026](docs/hotspots-2026-09-22.md)**: a prioritized map based on 52 verified repositories, 80 sampled PRs, primary project docs, and package discovery. Includes concrete design threads, community entry points, smaller experiments, archive/migration corrections, and explicit evidence limits. [Method](docs/research-method-2026-09-22.md) · [Evidence snapshot](data/hotspots-2026-09-22.json).
 
 ## Contents
 
@@ -19,7 +23,7 @@ How to stay on top of the open-source **agent harness** ecosystem, and how to te
 ## The two questions this repo exists to answer
 
 **1. Where is everyone?**
-Nowhere in particular. The ecosystem is split into three layers that do not share a name or a forum: (a) open runtimes such as pi, OpenHands, mini-swe-agent, OpenCode, Goose; (b) the config layer on top of closed CLIs (Claude Code, Codex, Cursor) shared as skills, hooks, plugins and `CLAUDE.md` files across hundreds of personal repos and ~190 plugin marketplaces; (c) curation and research, in awesome-lists, one guide with active GitHub Discussions, and a burst of 2026 arXiv papers. Real iteration happens in issues and PRs, not in a community. [`docs/landscape.md`](docs/landscape.md) maps it; [`docs/monitoring.md`](docs/monitoring.md) tells you how to watch it.
+Nowhere in particular. The ecosystem is split into three layers that do not share a name or a forum: (a) open runtimes such as pi, OpenHands, mini-swe-agent, OpenCode, Goose; (b) the config layer on top of both open and proprietary tools (Codex CLI, Claude Code, Cursor) shared as skills, hooks, plugins and `CLAUDE.md` files across hundreds of personal repos and ~190 plugin marketplaces; (c) curation and research, in awesome-lists, guides and project Discussions, and a burst of 2026 arXiv papers. Public iteration can be observed in issues, PRs, and independent packages; project communities provide additional entry points. [`docs/landscape.md`](docs/landscape.md) maps it; [`docs/monitoring.md`](docs/monitoring.md) tells you how to watch it.
 
 **2. How do I know my harness is better than yours?**
 Hold the model, task set, budget and sandbox resources fixed; vary only the harness; run 5 or more trials per task; report pass rate with paired confidence intervals *and* tokens, latency, and failure fingerprint; publish a Harness Card. Public leaderboards do not do this. [`docs/benchmarking.md`](docs/benchmarking.md) gives the protocol and the exact tooling (Harbor, Claw-SWE-Bench, HAL harness).

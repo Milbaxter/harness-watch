@@ -1,5 +1,7 @@
 # Monitoring: how to stay on top of it
 
+Start with the **[current hotspot map](hotspots-2026-09-22.md)** and its [evidence snapshot](../data/hotspots-2026-09-22.json). The expanded `sources.yml` adds priority and verification-date fields for new entries.
+
 The problem is not lack of information, it is that the signal is spread over five surfaces with different update rates. The approach below is a fixed cadence per surface plus a small set of saved queries. Budget: about 30 minutes a week once set up.
 
 ## Principles
@@ -24,15 +26,15 @@ The problem is not lack of information, it is that the signal is spread over fiv
 
 ## Surface 1: GitHub
 
-### Watch these repos (Releases + Discussions only, not all activity)
+### Watch these repos (selective releases, discussions, and design PRs)
 
-Core runtimes: `badlogic/pi-mono`, `can1357/oh-my-pi`, `SWE-agent/mini-swe-agent`, `OpenHands/OpenHands`, `sst/opencode`, `block/goose`.
+Core runtimes: `earendil-works/pi`, `can1357/oh-my-pi`, `SWE-agent/mini-swe-agent`, `OpenHands/OpenHands`, `anomalyco/opencode`, `aaif-goose/goose`.
 
 Benchmarks and eval infra: `harbor-framework/harbor`, `harbor-framework/terminal-bench-2-1` (and successors), `Qihoo360/harness-bench`, `opensquilla/claw-swe-bench`, `princeton-pli/hal-harness`, `reacher-z/HarnessBench`, `nyosegawa/harness-bench`.
 
 Curation: `nexu-io/harness-engineering-guide` (Discussions), `Turi-Labs/awesome-harness`, `Lijunjie2/awesome-agent-harness`, `sadsfae/awesome-claude-code`, `Chat2AnyLLM/awesome-claude-plugins`.
 
-Use GitHub's per-repo "Custom" watch and tick only Releases and Discussions. Everything else is noise.
+Use Releases and Discussions for a low-volume feed. For invention, additionally inspect selected design PRs and independent packages: release-only monitoring misses work before it ships. Avoid subscribing to every issue or PR; filter by the mechanism you care about.
 
 ### Saved repository searches
 
@@ -67,7 +69,7 @@ Bookmark `github.com/topics/harness-engineering`, `/topics/agent-harness`, `/top
 
 - npm: search `keywords:pi-package`, `keywords:harness-engineering`, `keywords:agent-harness`, `keywords:claude-code-plugin`. Sort by date.
 - PyPI: `harness`, `swe-agent`, `harbor` keyword searches; also watch `mini-swe-agent`, `openhands-sdk`, `harbor` release feeds (`https://pypi.org/rss/project/<name>/releases.xml`).
-- Weekly download counts are a better health signal than stars for CLI tools. `@oh-my-pi/pi-coding-agent` at ~80k/week vs registries at ~15/week tells you where the users are.
+- Package downloads can supplement activity evidence but are not unique users or a reliable innovation ranking. Historical download counts in older notes should be refreshed before reuse.
 
 ## Surface 3: arXiv
 

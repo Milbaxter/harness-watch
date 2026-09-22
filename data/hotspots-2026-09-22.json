@@ -1,0 +1,1616 @@
+{
+  "checked_on": "2026-09-22",
+  "method": "GitHub REST metadata plus selected primary READMEs, package catalog, and PR bodies. pushed_at is any repository push, not necessarily default-branch implementation activity. Stars are context only. No benchmarks run; private chat activity not inspected.",
+  "repositories": [
+    {
+      "repo": "can1357/oh-my-pi",
+      "url": "https://github.com/can1357/oh-my-pi",
+      "description": "⌥ Coding agent with the IDE wired in",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T01:22:29Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 32414,
+      "forks": 3444,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/can1357/oh-my-pi",
+      "readme_inspected": true
+    },
+    {
+      "repo": "anomalyco/opencode",
+      "url": "https://github.com/anomalyco/opencode",
+      "description": "The open source coding agent.",
+      "default_branch": "dev",
+      "pushed_at": "2026-09-22T05:45:51Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 209221,
+      "forks": 27577,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/anomalyco/opencode",
+      "readme_inspected": false
+    },
+    {
+      "repo": "code-yeongyu/oh-my-openagent",
+      "url": "https://github.com/code-yeongyu/oh-my-openagent",
+      "description": "OmO: Just type \"mass ulw\" keyword with your prompt. Now you are the master of graph engineering.",
+      "default_branch": "dev",
+      "pushed_at": "2026-09-22T06:24:51Z",
+      "archived": false,
+      "license_spdx": "NOASSERTION",
+      "stars": 69274,
+      "forks": 5706,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/code-yeongyu/oh-my-openagent",
+      "readme_inspected": true
+    },
+    {
+      "repo": "NousResearch/hermes-agent",
+      "url": "https://github.com/NousResearch/hermes-agent",
+      "description": "The agent that grows with you",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T06:26:23Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 247854,
+      "forks": 52223,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/NousResearch/hermes-agent",
+      "readme_inspected": true
+    },
+    {
+      "repo": "NousResearch/hermes-agent-self-evolution",
+      "url": "https://github.com/NousResearch/hermes-agent-self-evolution",
+      "description": "⚒ Evolutionary self-improvement for Hermes Agent — optimize skills, prompts, and code using DSPy + GEPA",
+      "default_branch": "main",
+      "pushed_at": "2026-06-17T11:53:04Z",
+      "archived": false,
+      "license_spdx": null,
+      "stars": 5386,
+      "forks": 640,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/NousResearch/hermes-agent-self-evolution",
+      "readme_inspected": false
+    },
+    {
+      "repo": "openclaw/openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "description": "The AI that really does things. Any OS. Any Platform. The lobster way. 🦞 ",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T06:29:47Z",
+      "archived": false,
+      "license_spdx": "NOASSERTION",
+      "stars": 390231,
+      "forks": 82093,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/openclaw/openclaw",
+      "readme_inspected": false
+    },
+    {
+      "repo": "HKUDS/nanobot",
+      "url": "https://github.com/HKUDS/nanobot",
+      "description": "Ultra-lightweight, open-source, self-hosted personal AI agent framework in Python with WebUI, tools, memory, MCP, multi-agent workflows, automation, and chat apps",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T06:22:33Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 48471,
+      "forks": 8566,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/HKUDS/nanobot",
+      "readme_inspected": false
+    },
+    {
+      "repo": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "default_branch": "main",
+      "pushed_at": "2026-09-20T17:43:04Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 289838,
+      "forks": 25937,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/obra/superpowers",
+      "readme_inspected": true
+    },
+    {
+      "repo": "gsd-build/get-shit-done",
+      "url": "https://github.com/gsd-build/get-shit-done",
+      "description": "A light-weight and powerful meta-prompting, context engineering and spec-driven development system for Claude Code by TÂCHES.",
+      "default_branch": "main",
+      "pushed_at": "2026-05-31T17:46:54Z",
+      "archived": true,
+      "license_spdx": "MIT",
+      "stars": 64482,
+      "forks": 5446,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/gsd-build/get-shit-done",
+      "readme_inspected": true
+    },
+    {
+      "repo": "gastownhall/gastown",
+      "url": "https://github.com/gastownhall/gastown",
+      "description": "Gas Town - multi-agent workspace manager",
+      "default_branch": "main",
+      "pushed_at": "2026-09-18T00:41:51Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 18146,
+      "forks": 1673,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/gastownhall/gastown",
+      "readme_inspected": false
+    },
+    {
+      "repo": "gastownhall/beads",
+      "url": "https://github.com/gastownhall/beads",
+      "description": "Beads - A memory upgrade for your coding agent",
+      "default_branch": "main",
+      "pushed_at": "2026-09-21T09:49:16Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 27348,
+      "forks": 1852,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/gastownhall/beads",
+      "readme_inspected": false
+    },
+    {
+      "repo": "gepa-ai/gepa",
+      "url": "https://github.com/gepa-ai/gepa",
+      "description": "Optimize prompts, code, and more with AI-powered Reflective Optimization",
+      "default_branch": "main",
+      "pushed_at": "2026-09-21T21:42:06Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 6696,
+      "forks": 548,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/gepa-ai/gepa",
+      "readme_inspected": true
+    },
+    {
+      "repo": "airbnb/agent-harness-optimizer",
+      "url": "https://github.com/airbnb/agent-harness-optimizer",
+      "description": "A benchmark-agnostic framework for automatically optimizing LLM agent harnesses",
+      "default_branch": "main",
+      "pushed_at": "2026-08-31T16:12:35Z",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "stars": 5,
+      "forks": 0,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/airbnb/agent-harness-optimizer",
+      "readme_inspected": true
+    },
+    {
+      "repo": "A-EVO-Lab/AdaptiveHarness",
+      "url": "https://github.com/A-EVO-Lab/AdaptiveHarness",
+      "description": null,
+      "default_branch": "main",
+      "pushed_at": "2026-06-03T06:05:45Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 15,
+      "forks": 2,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/A-EVO-Lab/AdaptiveHarness",
+      "readme_inspected": false
+    },
+    {
+      "repo": "OpenHands/software-agent-sdk",
+      "url": "https://github.com/OpenHands/software-agent-sdk",
+      "description": "A clean, modular SDK for building AI agents with OpenHands V1.",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T05:29:46Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 1151,
+      "forks": 553,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/OpenHands/software-agent-sdk",
+      "readme_inspected": true
+    },
+    {
+      "repo": "SWE-agent/mini-swe-agent",
+      "url": "https://github.com/SWE-agent/mini-swe-agent",
+      "description": "The 100 line AI agent that solves GitHub issues or helps you in your command line. Radically simple, no huge configs, no giant monorepo—but scores >74% on SWE-bench verified!",
+      "default_branch": "main",
+      "pushed_at": "2026-09-21T22:02:14Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 7860,
+      "forks": 1062,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/SWE-agent/mini-swe-agent",
+      "readme_inspected": false
+    },
+    {
+      "repo": "nexu-io/harness-engineering-guide",
+      "url": "https://github.com/nexu-io/harness-engineering-guide",
+      "description": "🔧 The open guide to Harness Engineering — concepts, tutorials, papers, tools, and resources for building and managing AI agent runtimes.",
+      "default_branch": "main",
+      "pushed_at": "2026-04-19T12:30:39Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 659,
+      "forks": 81,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/nexu-io/harness-engineering-guide",
+      "readme_inspected": false
+    },
+    {
+      "repo": "earendil-works/pi",
+      "url": "https://github.com/earendil-works/pi",
+      "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+      "default_branch": "main",
+      "pushed_at": "2026-09-21T22:07:48Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 108248,
+      "forks": 13712,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/earendil-works/pi",
+      "readme_inspected": true
+    },
+    {
+      "repo": "nanocoai/nanoclaw",
+      "url": "https://github.com/nanocoai/nanoclaw",
+      "description": "A lightweight alternative to OpenClaw that runs in containers for security. Connects to WhatsApp, Telegram, Slack, Discord, Gmail and other messaging apps,, has memory, scheduled jobs, and runs directly on Anthropic's Agents SDK",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T04:04:34Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 30820,
+      "forks": 12830,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/nanocoai/nanoclaw",
+      "readme_inspected": true
+    },
+    {
+      "repo": "aaif-goose/goose",
+      "url": "https://github.com/aaif-goose/goose",
+      "description": "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T04:52:40Z",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "stars": 54542,
+      "forks": 6289,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/aaif-goose/goose",
+      "readme_inspected": false
+    },
+    {
+      "repo": "mitsuhiko/agent-stuff",
+      "url": "https://github.com/mitsuhiko/agent-stuff",
+      "description": "These are commands I use with agents, mostly Claude",
+      "default_branch": "main",
+      "pushed_at": "2026-09-06T09:49:43Z",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "stars": 3149,
+      "forks": 224,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/mitsuhiko/agent-stuff",
+      "readme_inspected": true
+    },
+    {
+      "repo": "open-gsd/gsd-core",
+      "url": "https://github.com/open-gsd/gsd-core",
+      "description": "Git. Ship. Done - Core",
+      "default_branch": "next",
+      "pushed_at": "2026-09-21T19:30:55Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 9716,
+      "forks": 698,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/open-gsd/gsd-core",
+      "readme_inspected": true
+    },
+    {
+      "repo": "langchain-ai/deepagents",
+      "url": "https://github.com/langchain-ai/deepagents",
+      "description": "The batteries-included agent harness.",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T05:07:38Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 29634,
+      "forks": 4168,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/langchain-ai/deepagents",
+      "readme_inspected": true
+    },
+    {
+      "repo": "gastownhall/gascity",
+      "url": "https://github.com/gastownhall/gascity",
+      "description": "Orchestration-builder SDK for multi-agent coding workflows",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T03:26:13Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 1285,
+      "forks": 418,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/gastownhall/gascity",
+      "readme_inspected": true
+    },
+    {
+      "repo": "Flesymeb/HarnessOfHarness",
+      "url": "https://github.com/Flesymeb/HarnessOfHarness",
+      "description": "Harness of Harness: Multi-Day Autonomous Software Development with Continual Improvement",
+      "default_branch": "main",
+      "pushed_at": "2026-09-08T07:25:21Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 140,
+      "forks": 15,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/Flesymeb/HarnessOfHarness",
+      "readme_inspected": true
+    },
+    {
+      "repo": "zjunlp/SkillAdaptor",
+      "url": "https://github.com/zjunlp/SkillAdaptor",
+      "description": "SkillAdaptor: Self-Adapting Skills for LLM Agents from Trajectories",
+      "default_branch": "main",
+      "pushed_at": "2026-07-16T14:28:55Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 18,
+      "forks": 0,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/zjunlp/SkillAdaptor",
+      "readme_inspected": false
+    },
+    {
+      "repo": "openai/codex",
+      "url": "https://github.com/openai/codex",
+      "description": "Lightweight coding agent that runs in your terminal",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T06:25:05Z",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "stars": 125827,
+      "forks": 19583,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/openai/codex",
+      "readme_inspected": false
+    },
+    {
+      "repo": "google-gemini/gemini-cli",
+      "url": "https://github.com/google-gemini/gemini-cli",
+      "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T01:33:34Z",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "stars": 107129,
+      "forks": 14609,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/google-gemini/gemini-cli",
+      "readme_inspected": false
+    },
+    {
+      "repo": "mistralai/mistral-vibe",
+      "url": "https://github.com/mistralai/mistral-vibe",
+      "description": "Minimal CLI coding agent by Mistral",
+      "default_branch": "main",
+      "pushed_at": "2026-09-21T15:47:12Z",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "stars": 4986,
+      "forks": 704,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/mistralai/mistral-vibe",
+      "readme_inspected": false
+    },
+    {
+      "repo": "cline/cline",
+      "url": "https://github.com/cline/cline",
+      "description": "Autonomous coding agent as an SDK, IDE extension, or CLI assistant.",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T06:25:56Z",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "stars": 69004,
+      "forks": 7475,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/cline/cline",
+      "readme_inspected": false
+    },
+    {
+      "repo": "RooCodeInc/Roo-Code",
+      "url": "https://github.com/RooCodeInc/Roo-Code",
+      "description": "Roo Code gives you a whole dev team of AI agents in your code editor.",
+      "default_branch": "main",
+      "pushed_at": "2026-05-15T18:08:47Z",
+      "archived": true,
+      "license_spdx": "Apache-2.0",
+      "stars": 24298,
+      "forks": 3419,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/RooCodeInc/Roo-Code",
+      "readme_inspected": false
+    },
+    {
+      "repo": "Kilo-Org/kilocode",
+      "url": "https://github.com/Kilo-Org/kilocode",
+      "description": "Kilo is the all-in-one agentic engineering platform. Build, ship, and iterate faster with the most popular open source coding agent.",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T06:27:25Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 27384,
+      "forks": 3180,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/Kilo-Org/kilocode",
+      "readme_inspected": false
+    },
+    {
+      "repo": "harbor-framework/harbor",
+      "url": "https://github.com/harbor-framework/harbor",
+      "description": "Framework for evaluating and improving agents ",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T04:56:37Z",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "stars": 5480,
+      "forks": 1838,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/harbor-framework/harbor",
+      "readme_inspected": false
+    },
+    {
+      "repo": "agentclientprotocol/agent-client-protocol",
+      "url": "https://github.com/agentclientprotocol/agent-client-protocol",
+      "description": " A protocol for connecting any editor to any agent",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T04:57:24Z",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "stars": 4300,
+      "forks": 398,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/agentclientprotocol/agent-client-protocol",
+      "readme_inspected": false
+    },
+    {
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills",
+      "description": "Public repository for Agent Skills",
+      "default_branch": "main",
+      "pushed_at": "2026-09-10T19:44:11Z",
+      "archived": false,
+      "license_spdx": null,
+      "stars": 177532,
+      "forks": 21027,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/anthropics/skills",
+      "readme_inspected": false
+    },
+    {
+      "repo": "ruvnet/ruflo",
+      "url": "https://github.com/ruvnet/ruflo",
+      "description": "🌊 The original agent harness. Deploy intelligent multi-player swarms, coordinate autonomous workflows, and build conversational AI systems. Features adaptive memory, self-learning intelligence, federation, vector RAG integration, and native Claude Code / Codex / Hermes and many more Integrated",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T06:20:41Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 73026,
+      "forks": 8667,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/ruvnet/ruflo",
+      "readme_inspected": false
+    },
+    {
+      "repo": "PrimeIntellect-ai/prime",
+      "url": "https://github.com/PrimeIntellect-ai/prime",
+      "description": "Official CLI and Python SDK for Prime Intellect - access GPU compute, remote sandboxes, RL environments, and distributed training infrastructure for AI development at scale.",
+      "default_branch": "main",
+      "pushed_at": "2026-09-21T11:11:24Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 329,
+      "forks": 66,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/PrimeIntellect-ai/prime",
+      "readme_inspected": false
+    },
+    {
+      "repo": "stanfordnlp/dspy",
+      "url": "https://github.com/stanfordnlp/dspy",
+      "description": "DSPy: The framework for programming—not prompting—language models",
+      "default_branch": "main",
+      "pushed_at": "2026-09-21T18:14:32Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 38191,
+      "forks": 3337,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/stanfordnlp/dspy",
+      "readme_inspected": false
+    },
+    {
+      "repo": "PrimeIntellect-ai/prime-agent",
+      "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "description": "A self-improving RLM agent for coding workflows and long-running autonomous tasks.",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T02:48:34Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 21149,
+      "forks": 2313,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/PrimeIntellect-ai/prime-agent",
+      "readme_inspected": true
+    },
+    {
+      "repo": "PrimeIntellect-ai/verifiers",
+      "url": "https://github.com/PrimeIntellect-ai/verifiers",
+      "description": "Our library for RL environments + evals",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T05:29:54Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 4640,
+      "forks": 677,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/PrimeIntellect-ai/verifiers",
+      "readme_inspected": true
+    },
+    {
+      "repo": "stanford-iris-lab/meta-harness",
+      "url": "https://github.com/stanford-iris-lab/meta-harness",
+      "description": "Reference code for the Meta-Harness paper.",
+      "default_branch": "main",
+      "pushed_at": "2026-09-11T16:17:54Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 1601,
+      "forks": 158,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/stanford-iris-lab/meta-harness",
+      "readme_inspected": true
+    },
+    {
+      "repo": "thirdlayerinc/autoagent",
+      "url": "https://github.com/thirdlayerinc/autoagent",
+      "description": "autonomous harness engineering",
+      "default_branch": "main",
+      "pushed_at": "2026-04-03T21:11:51Z",
+      "archived": false,
+      "license_spdx": null,
+      "stars": 4573,
+      "forks": 500,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/thirdlayerinc/autoagent",
+      "readme_inspected": false
+    },
+    {
+      "repo": "harrystamatoukos/self-improving-agent-harness",
+      "url": "https://github.com/harrystamatoukos/self-improving-agent-harness",
+      "description": "Autoresearch-style self-improving coding agent. An inner agent (agent.ts) gets iteratively improved by an outer agent guided by program.md.",
+      "default_branch": "main",
+      "pushed_at": "2026-03-10T22:56:04Z",
+      "archived": false,
+      "license_spdx": null,
+      "stars": 0,
+      "forks": 0,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/harrystamatoukos/self-improving-agent-harness",
+      "readme_inspected": false
+    },
+    {
+      "repo": "kayba-ai/autoharness",
+      "url": "https://github.com/kayba-ai/autoharness",
+      "description": "🔁 Improve your agent harness autonomously overnight",
+      "default_branch": "main",
+      "pushed_at": "2026-04-27T14:37:03Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 307,
+      "forks": 14,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/kayba-ai/autoharness",
+      "readme_inspected": false
+    },
+    {
+      "repo": "karpathy/autoresearch",
+      "url": "https://github.com/karpathy/autoresearch",
+      "description": "AI agents running research on single-GPU nanochat training automatically",
+      "default_branch": "master",
+      "pushed_at": "2026-03-26T00:07:37Z",
+      "archived": false,
+      "license_spdx": null,
+      "stars": 96510,
+      "forks": 13510,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/karpathy/autoresearch",
+      "readme_inspected": false
+    },
+    {
+      "repo": "agentskills/agentskills",
+      "url": "https://github.com/agentskills/agentskills",
+      "description": "Specification and documentation for Agent Skills",
+      "default_branch": "main",
+      "pushed_at": "2026-08-09T20:36:04Z",
+      "archived": false,
+      "license_spdx": "Apache-2.0",
+      "stars": 25582,
+      "forks": 1922,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/agentskills/agentskills",
+      "readme_inspected": false
+    },
+    {
+      "repo": "deepseek-ai/deepseek-harness",
+      "url": "https://github.com/deepseek-ai/deepseek-harness",
+      "description": "DeepSeek Harness: Everything is a Plugin.",
+      "default_branch": "master",
+      "pushed_at": "2026-09-22T06:16:26Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 232645,
+      "forks": 27933,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/deepseek-ai/deepseek-harness",
+      "readme_inspected": true
+    },
+    {
+      "repo": "dshplugin-app/deepseek-harness-plugins",
+      "url": "https://github.com/dshplugin-app/deepseek-harness-plugins",
+      "description": "A maintained directory of DeepSeek Harness plugins with categories, GitHub sources, install details, security signals, and compatibility evidence.",
+      "default_branch": "main",
+      "pushed_at": "2026-08-17T01:53:25Z",
+      "archived": false,
+      "license_spdx": null,
+      "stars": 3,
+      "forks": 0,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/dshplugin-app/deepseek-harness-plugins",
+      "readme_inspected": false
+    },
+    {
+      "repo": "weijiafu14/pi2dsh",
+      "url": "https://github.com/weijiafu14/pi2dsh",
+      "description": "Bridge the Pi and DeepSeek Harness ecosystems: one Pi Host ABI runs unmodified Pi extensions as native DSH plugins. 打通 Pi 与 DSH 生态。",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T04:00:36Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 202,
+      "forks": 32,
+      "has_discussions": true,
+      "source": "https://api.github.com/repos/weijiafu14/pi2dsh",
+      "readme_inspected": false
+    },
+    {
+      "repo": "davebcn87/pi-autoresearch",
+      "url": "https://github.com/davebcn87/pi-autoresearch",
+      "description": "Autonomous experiment loop extension for pi",
+      "default_branch": "main",
+      "pushed_at": "2026-09-10T09:28:22Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 8094,
+      "forks": 460,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/davebcn87/pi-autoresearch",
+      "readme_inspected": false
+    },
+    {
+      "repo": "TannerMidd/SpecPi",
+      "url": "https://github.com/TannerMidd/SpecPi",
+      "description": "A minimal, explicit, provider-safe harness for the Pi coding agent",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T05:04:46Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 8,
+      "forks": 0,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/TannerMidd/SpecPi",
+      "readme_inspected": false
+    },
+    {
+      "repo": "fitchmultz/pi-tool-duration",
+      "url": "https://github.com/fitchmultz/pi-tool-duration",
+      "description": "Append model-visible durations to slow Pi tool results",
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T02:52:23Z",
+      "archived": false,
+      "license_spdx": "MIT",
+      "stars": 5,
+      "forks": 0,
+      "has_discussions": false,
+      "source": "https://api.github.com/repos/fitchmultz/pi-tool-duration",
+      "readme_inspected": false
+    }
+  ],
+  "redirects": [
+    {
+      "requested": "badlogic/pi-mono",
+      "redirect": "https://api.github.com/repositories/1035029907"
+    },
+    {
+      "requested": "qwibitai/nanoclaw",
+      "redirect": "https://api.github.com/repositories/1146738089"
+    },
+    {
+      "requested": "block/goose",
+      "redirect": "https://api.github.com/repositories/846698999"
+    }
+  ],
+  "unresolved": [
+    {
+      "repo": "vercel-labs/ai-sdk",
+      "response": {}
+    }
+  ],
+  "pr_samples": [
+    {
+      "repo": "earendil-works/pi",
+      "sampling": "8 most recently updated PRs, all states; not a count of activity or quality",
+      "pulls": [
+        {
+          "number": 9871,
+          "title": "第一次Git实验作业：曹紫欣",
+          "url": "https://github.com/earendil-works/pi/pull/9871",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T02:43:02Z",
+          "merged_at": null,
+          "author": "czx666859"
+        },
+        {
+          "number": 9869,
+          "title": "fix(ai): skip empty Mistral content deltas (#9674)",
+          "url": "https://github.com/earendil-works/pi/pull/9869",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T01:50:54Z",
+          "merged_at": null,
+          "author": "ShangGuan2613"
+        },
+        {
+          "number": 9866,
+          "title": "fix(agent): validate persisted tool arguments before replay",
+          "url": "https://github.com/earendil-works/pi/pull/9866",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T00:42:31Z",
+          "merged_at": null,
+          "author": "YxinMiracle"
+        },
+        {
+          "number": 9861,
+          "title": "fix(ai,coding-agent): honor Google retry delay on rate limit 429s",
+          "url": "https://github.com/earendil-works/pi/pull/9861",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-21T22:38:40Z",
+          "merged_at": null,
+          "author": "beantownbytes"
+        },
+        {
+          "number": 9859,
+          "title": "feat(ai,coding-agent): add Grok 4.7 support",
+          "url": "https://github.com/earendil-works/pi/pull/9859",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-21T22:00:04Z",
+          "merged_at": null,
+          "author": "SASUKE40"
+        },
+        {
+          "number": 9851,
+          "title": "fix(ai): remove bare Anthropic model IDs from Bedrock catalog",
+          "url": "https://github.com/earendil-works/pi/pull/9851",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-21T17:31:04Z",
+          "merged_at": null,
+          "author": "jubingainwell"
+        },
+        {
+          "number": 9850,
+          "title": "WIP - Add Ollama as a native provider",
+          "url": "https://github.com/earendil-works/pi/pull/9850",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-21T17:03:53Z",
+          "merged_at": null,
+          "author": "kedarpotdar-nv"
+        },
+        {
+          "number": 9848,
+          "title": "docs(tui): document Component.invalidate() as required",
+          "url": "https://github.com/earendil-works/pi/pull/9848",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-21T16:38:36Z",
+          "merged_at": null,
+          "author": "Frank-zhu0404"
+        }
+      ]
+    },
+    {
+      "repo": "can1357/oh-my-pi",
+      "sampling": "8 most recently updated PRs, all states; not a count of activity or quality",
+      "pulls": [
+        {
+          "number": 12783,
+          "title": "feat(coding-agent): add --agent launch flag",
+          "url": "https://github.com/can1357/oh-my-pi/pull/12783",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T06:14:46Z",
+          "merged_at": null,
+          "author": "ShayGus"
+        },
+        {
+          "number": 12699,
+          "title": "feat(coding-agent): port upstream pi's cache-warming strategy",
+          "url": "https://github.com/can1357/oh-my-pi/pull/12699",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T06:06:40Z",
+          "merged_at": null,
+          "author": "KamijoToma"
+        },
+        {
+          "number": 12779,
+          "title": "fix(utils): contain pipe-write EPIPE instead of tearing down the session",
+          "url": "https://github.com/can1357/oh-my-pi/pull/12779",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T05:57:53Z",
+          "merged_at": null,
+          "author": "HJXArthurAtlas"
+        },
+        {
+          "number": 12497,
+          "title": "feat(move): surface recent working directories in move picker",
+          "url": "https://github.com/can1357/oh-my-pi/pull/12497",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T05:17:22Z",
+          "merged_at": null,
+          "author": "avabbbb"
+        },
+        {
+          "number": 12757,
+          "title": "feat: show per-account usage availability",
+          "url": "https://github.com/can1357/oh-my-pi/pull/12757",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T04:54:36Z",
+          "merged_at": null,
+          "author": "Gerry9000"
+        },
+        {
+          "number": 12775,
+          "title": "fix(ai): map Bedrock stream exception shapes to their service-model status",
+          "url": "https://github.com/can1357/oh-my-pi/pull/12775",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T04:54:35Z",
+          "merged_at": null,
+          "author": "nick-maderight"
+        },
+        {
+          "number": 12404,
+          "title": "fix(coding-agent): carry the original filesystem path of pasted images to the agent",
+          "url": "https://github.com/can1357/oh-my-pi/pull/12404",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T04:42:50Z",
+          "merged_at": null,
+          "author": "xiechimon"
+        },
+        {
+          "number": 12436,
+          "title": "fix(auth): stop treating a keyless empty-paste placeholder as authenticated",
+          "url": "https://github.com/can1357/oh-my-pi/pull/12436",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T04:41:59Z",
+          "merged_at": null,
+          "author": "xiechimon"
+        }
+      ]
+    },
+    {
+      "repo": "anomalyco/opencode",
+      "sampling": "8 most recently updated PRs, all states; not a count of activity or quality",
+      "pulls": [
+        {
+          "number": 50537,
+          "title": "fix(session): ignore impossible usage reports in compaction preflight",
+          "url": "https://github.com/anomalyco/opencode/pull/50537",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T06:28:22Z",
+          "merged_at": null,
+          "author": "Veld101"
+        },
+        {
+          "number": 50535,
+          "title": "feat: add the thinking block and a read-only Git graph",
+          "url": "https://github.com/anomalyco/opencode/pull/50535",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T05:54:10Z",
+          "merged_at": null,
+          "author": "RsLuna7"
+        },
+        {
+          "number": 49689,
+          "title": "fix(mistral): bump @ai-sdk/mistral to 3.0.64 to unbreak streamed tool calls",
+          "url": "https://github.com/anomalyco/opencode/pull/49689",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T05:52:03Z",
+          "merged_at": null,
+          "author": "TimoStolz"
+        },
+        {
+          "number": 50532,
+          "title": "fix(tui): rank model search results by relevance",
+          "url": "https://github.com/anomalyco/opencode/pull/50532",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T05:47:07Z",
+          "merged_at": null,
+          "author": "fede-kamel"
+        },
+        {
+          "number": 50268,
+          "title": "refactor(schema): rename message provider blobs to native",
+          "url": "https://github.com/anomalyco/opencode/pull/50268",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T05:38:20Z",
+          "merged_at": null,
+          "author": "rekram1-node"
+        },
+        {
+          "number": 50529,
+          "title": "refactor(ai): rename evaluation action to run",
+          "url": "https://github.com/anomalyco/opencode/pull/50529",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T05:28:57Z",
+          "merged_at": null,
+          "author": "rekram1-node"
+        },
+        {
+          "number": 50519,
+          "title": "fix(core): stop forcing a consent prompt on MCP OAuth login",
+          "url": "https://github.com/anomalyco/opencode/pull/50519",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T05:25:08Z",
+          "merged_at": "2026-09-22T05:25:07Z",
+          "author": "rekram1-node"
+        },
+        {
+          "number": 50522,
+          "title": "fix(cli): format opencode models --verbose as a table",
+          "url": "https://github.com/anomalyco/opencode/pull/50522",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T05:17:16Z",
+          "merged_at": null,
+          "author": "fede-kamel"
+        }
+      ]
+    },
+    {
+      "repo": "code-yeongyu/oh-my-openagent",
+      "sampling": "8 most recently updated PRs, all states; not a count of activity or quality",
+      "pulls": [
+        {
+          "number": 8635,
+          "title": "fix(omo-codex): recognize the renamed ulw-loop reviewer agents in the spawn guard",
+          "url": "https://github.com/code-yeongyu/oh-my-openagent/pull/8635",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T06:30:59Z",
+          "merged_at": "2026-09-22T06:30:58Z",
+          "author": "code-yeongyu"
+        },
+        {
+          "number": 8641,
+          "title": "docs: name the standalone edition OmO Native and recommend bun",
+          "url": "https://github.com/code-yeongyu/oh-my-openagent/pull/8641",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T06:25:14Z",
+          "merged_at": null,
+          "author": "code-yeongyu"
+        },
+        {
+          "number": 8638,
+          "title": "fix(codex-install): digest the bundle's real inputs so a stale artifact cannot pass the freshness guard",
+          "url": "https://github.com/code-yeongyu/oh-my-openagent/pull/8638",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T06:24:49Z",
+          "merged_at": "2026-09-22T06:24:47Z",
+          "author": "code-yeongyu"
+        },
+        {
+          "number": 8639,
+          "title": "fix(omo-senpi): name the standalone edition OmO Native in its own notices",
+          "url": "https://github.com/code-yeongyu/oh-my-openagent/pull/8639",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T06:24:43Z",
+          "merged_at": null,
+          "author": "code-yeongyu"
+        },
+        {
+          "number": 8637,
+          "title": "docs: name the retired reviewer ids literally so the wording guard passes on dev",
+          "url": "https://github.com/code-yeongyu/oh-my-openagent/pull/8637",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T06:14:50Z",
+          "merged_at": "2026-09-22T06:14:47Z",
+          "author": "code-yeongyu"
+        },
+        {
+          "number": 8634,
+          "title": "fix(senpi-task): a failed turn is not a turn",
+          "url": "https://github.com/code-yeongyu/oh-my-openagent/pull/8634",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T06:06:09Z",
+          "merged_at": "2026-09-22T06:06:07Z",
+          "author": "code-yeongyu"
+        },
+        {
+          "number": 8626,
+          "title": "feat(omo-opencode): OpenCode V2 dual-host plugin support (revives #7570)",
+          "url": "https://github.com/code-yeongyu/oh-my-openagent/pull/8626",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T05:22:00Z",
+          "merged_at": null,
+          "author": "codeg-dev"
+        },
+        {
+          "number": 8623,
+          "title": "feat: omo.json speaks [native] and the ulw-loop reviewers are omo-native-*",
+          "url": "https://github.com/code-yeongyu/oh-my-openagent/pull/8623",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T03:41:48Z",
+          "merged_at": "2026-09-22T03:41:46Z",
+          "author": "code-yeongyu"
+        }
+      ]
+    },
+    {
+      "repo": "NousResearch/hermes-agent",
+      "sampling": "8 most recently updated PRs, all states; not a count of activity or quality",
+      "pulls": [
+        {
+          "number": 118853,
+          "title": "fix(desktop): keep a repeated prompt when the stored transcript is behind the turn",
+          "url": "https://github.com/NousResearch/hermes-agent/pull/118853",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T06:30:52Z",
+          "merged_at": null,
+          "author": "rodricksz4h5"
+        },
+        {
+          "number": 118843,
+          "title": "config.yaml quoted-string lists are flagged by doctor/startup and no longer written by config set; catalog stars probe re-mints its App token (#83308 #105706 #118113)",
+          "url": "https://github.com/NousResearch/hermes-agent/pull/118843",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T06:30:49Z",
+          "merged_at": null,
+          "author": "teknium1"
+        },
+        {
+          "number": 118844,
+          "title": "Plugin hook policy: hung or raising guards fail closed without wedging, block outranks approve, shell approve reaches the gate, async pre_gateway_dispatch awaited (#105223 #109624 #87420 #92553 #105827 #110241)",
+          "url": "https://github.com/NousResearch/hermes-agent/pull/118844",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T06:30:47Z",
+          "merged_at": null,
+          "author": "teknium1"
+        },
+        {
+          "number": 80517,
+          "title": "fix(tools,cli): never downgrade lazy deps at runtime; truthful memory status",
+          "url": "https://github.com/NousResearch/hermes-agent/pull/80517",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T06:30:40Z",
+          "merged_at": null,
+          "author": "Crqptx"
+        },
+        {
+          "number": 111322,
+          "title": "fix(toolsets): validate configured plugin toolsets before discovery finishes",
+          "url": "https://github.com/NousResearch/hermes-agent/pull/111322",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T06:30:37Z",
+          "merged_at": null,
+          "author": "budokai-msi"
+        },
+        {
+          "number": 112840,
+          "title": "cli: don't warn about toolsets provided by enabled plugins",
+          "url": "https://github.com/NousResearch/hermes-agent/pull/112840",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T06:30:32Z",
+          "merged_at": null,
+          "author": "bartekczerwinski"
+        },
+        {
+          "number": 80559,
+          "title": "fix(lazy-deps): stop auto-downgrading newer hindsight-client",
+          "url": "https://github.com/NousResearch/hermes-agent/pull/80559",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T06:30:28Z",
+          "merged_at": null,
+          "author": "patil2001"
+        },
+        {
+          "number": 88469,
+          "title": "fix(deps): relax hindsight-client pin to >=0.6.1,<1.0",
+          "url": "https://github.com/NousResearch/hermes-agent/pull/88469",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T06:30:23Z",
+          "merged_at": null,
+          "author": "crayfish-ai"
+        }
+      ]
+    },
+    {
+      "repo": "PrimeIntellect-ai/prime-agent",
+      "sampling": "8 most recently updated PRs, all states; not a count of activity or quality",
+      "pulls": [
+        {
+          "number": 2507,
+          "title": "fetch model and mcp catalogs from prime-agent-catalog",
+          "url": "https://github.com/PrimeIntellect-ai/prime-agent/pull/2507",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T03:00:37Z",
+          "merged_at": null,
+          "author": "kevinjosethomas"
+        },
+        {
+          "number": 2516,
+          "title": "[PR -- Features] Surface tailnet remote-agent mesh sessions in the agents view (mesh 4/5)",
+          "url": "https://github.com/PrimeIntellect-ai/prime-agent/pull/2516",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T01:53:57Z",
+          "merged_at": null,
+          "author": "sethkarten"
+        },
+        {
+          "number": 2519,
+          "title": "use the prime inference catalog thinking metadata for reasoning controls",
+          "url": "https://github.com/PrimeIntellect-ai/prime-agent/pull/2519",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T01:01:42Z",
+          "merged_at": null,
+          "author": "kevinjosethomas"
+        },
+        {
+          "number": 2517,
+          "title": "[PR -- Features] Daemon TCP listener for tailnet mesh connections (mesh 2/5)",
+          "url": "https://github.com/PrimeIntellect-ai/prime-agent/pull/2517",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T00:31:44Z",
+          "merged_at": null,
+          "author": "sethkarten"
+        },
+        {
+          "number": 2484,
+          "title": "feat(coding-agent): add a System 1 / System 2 harness router",
+          "url": "https://github.com/PrimeIntellect-ai/prime-agent/pull/2484",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-21T23:12:46Z",
+          "merged_at": null,
+          "author": "sethkarten"
+        },
+        {
+          "number": 2406,
+          "title": "[RSI, feature] Incident summary command for daemon log forensics",
+          "url": "https://github.com/PrimeIntellect-ai/prime-agent/pull/2406",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-21T22:14:32Z",
+          "merged_at": null,
+          "author": "sethkarten"
+        },
+        {
+          "number": 2513,
+          "title": "prepare prime agent v0.9.6 release",
+          "url": "https://github.com/PrimeIntellect-ai/prime-agent/pull/2513",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-21T22:14:31Z",
+          "merged_at": null,
+          "author": "kevinjosethomas"
+        },
+        {
+          "number": 2515,
+          "title": "fix(coding-agent): add restart hint to warning logs for blocked daemon update",
+          "url": "https://github.com/PrimeIntellect-ai/prime-agent/pull/2515",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-21T22:01:18Z",
+          "merged_at": "2026-09-21T22:00:40Z",
+          "author": "eexwhyzee"
+        }
+      ]
+    },
+    {
+      "repo": "langchain-ai/deepagents",
+      "sampling": "8 most recently updated PRs, all states; not a count of activity or quality",
+      "pulls": [
+        {
+          "number": 6457,
+          "title": "release(deepagents-code): 0.1.73",
+          "url": "https://github.com/langchain-ai/deepagents/pull/6457",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T05:07:58Z",
+          "merged_at": "2026-09-22T04:58:30Z",
+          "author": "github-actions[bot]"
+        },
+        {
+          "number": 6305,
+          "title": "release(deepagents-talon): 0.0.9",
+          "url": "https://github.com/langchain-ai/deepagents/pull/6305",
+          "state": "open",
+          "draft": true,
+          "updated_at": "2026-09-22T05:07:39Z",
+          "merged_at": null,
+          "author": "github-actions[bot]"
+        },
+        {
+          "number": 6434,
+          "title": "feat(code): add isolated `/btw` side questions",
+          "url": "https://github.com/langchain-ai/deepagents/pull/6434",
+          "state": "open",
+          "draft": true,
+          "updated_at": "2026-09-22T04:52:59Z",
+          "merged_at": null,
+          "author": "mdrxy"
+        },
+        {
+          "number": 6480,
+          "title": "chore(deps): raise dependency minimums for `all`",
+          "url": "https://github.com/langchain-ai/deepagents/pull/6480",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T04:52:26Z",
+          "merged_at": "2026-09-22T04:52:23Z",
+          "author": "langchain-oss-automated-triage[bot]"
+        },
+        {
+          "number": 6479,
+          "title": "chore(deps): bump `deepagents` pin in `deepagents-code` to 0.7.17",
+          "url": "https://github.com/langchain-ai/deepagents/pull/6479",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T04:51:46Z",
+          "merged_at": "2026-09-22T04:51:45Z",
+          "author": "langchain-oss-automated-triage[bot]"
+        },
+        {
+          "number": 6458,
+          "title": "release(deepagents): 0.7.17",
+          "url": "https://github.com/langchain-ai/deepagents/pull/6458",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T04:50:28Z",
+          "merged_at": "2026-09-22T04:44:21Z",
+          "author": "github-actions[bot]"
+        },
+        {
+          "number": 6477,
+          "title": "feat(code): offer summarized threads when cache expires",
+          "url": "https://github.com/langchain-ai/deepagents/pull/6477",
+          "state": "open",
+          "draft": true,
+          "updated_at": "2026-09-22T04:40:57Z",
+          "merged_at": null,
+          "author": "mdrxy"
+        },
+        {
+          "number": 6478,
+          "title": "chore(deps): raise dependency minimums for `all`",
+          "url": "https://github.com/langchain-ai/deepagents/pull/6478",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T04:39:03Z",
+          "merged_at": "2026-09-22T04:39:01Z",
+          "author": "langchain-oss-automated-triage[bot]"
+        }
+      ]
+    },
+    {
+      "repo": "gastownhall/gascity",
+      "sampling": "8 most recently updated PRs, all states; not a count of activity or quality",
+      "pulls": [
+        {
+          "number": 6516,
+          "title": "test(supervisor): assert one forced-stop budget semantically",
+          "url": "https://github.com/gastownhall/gascity/pull/6516",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T05:37:01Z",
+          "merged_at": null,
+          "author": "AlexBelous"
+        },
+        {
+          "number": 6508,
+          "title": "fix(gc/trace): report when the trace head was last written (ga-d7yoo2)",
+          "url": "https://github.com/gastownhall/gascity/pull/6508",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T04:50:40Z",
+          "merged_at": null,
+          "author": "quad341"
+        },
+        {
+          "number": 6512,
+          "title": "fix(dolt): unblock watchdog SIGKILL on Darwin",
+          "url": "https://github.com/gastownhall/gascity/pull/6512",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T03:39:44Z",
+          "merged_at": null,
+          "author": "rjgeng"
+        },
+        {
+          "number": 6097,
+          "title": "fix(suspensionstate): serialize rig suspend/resume with a cross-process flock (#6056)",
+          "url": "https://github.com/gastownhall/gascity/pull/6097",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T03:39:39Z",
+          "merged_at": null,
+          "author": "rjgeng"
+        },
+        {
+          "number": 5977,
+          "title": "fix(tmux): detect Claude's bare-gerund spinner, fix submit-confirm baseline, surface two swallowed errors (#5954)",
+          "url": "https://github.com/gastownhall/gascity/pull/5977",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T03:32:16Z",
+          "merged_at": null,
+          "author": "rjgeng"
+        },
+        {
+          "number": 6326,
+          "title": "fix(tmux): corroborate ListRunning's ServerAbsent with a socket observation",
+          "url": "https://github.com/gastownhall/gascity/pull/6326",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T03:32:11Z",
+          "merged_at": null,
+          "author": "rjgeng"
+        },
+        {
+          "number": 6397,
+          "title": "fix(nudge): probe controller liveness before suppressing the per-session nudge poller",
+          "url": "https://github.com/gastownhall/gascity/pull/6397",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T03:06:39Z",
+          "merged_at": null,
+          "author": "rjgeng"
+        },
+        {
+          "number": 6411,
+          "title": "fix(ci): raise cmd-gc-productmetrics-testhook's timeout to fit the runner it actually gets",
+          "url": "https://github.com/gastownhall/gascity/pull/6411",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T03:06:34Z",
+          "merged_at": null,
+          "author": "rjgeng"
+        }
+      ]
+    },
+    {
+      "repo": "gepa-ai/gepa",
+      "sampling": "8 most recently updated PRs, all states; not a count of activity or quality",
+      "pulls": [
+        {
+          "number": 435,
+          "title": "fix(reflection): skip a truncated reflection output instead of adopting it as a candidate",
+          "url": "https://github.com/gepa-ai/gepa/pull/435",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-21T21:51:24Z",
+          "merged_at": null,
+          "author": "overgoy"
+        },
+        {
+          "number": 460,
+          "title": "Reject malformed reflection fences",
+          "url": "https://github.com/gepa-ai/gepa/pull/460",
+          "state": "closed",
+          "draft": true,
+          "updated_at": "2026-09-21T21:49:52Z",
+          "merged_at": null,
+          "author": "sethkimmel3"
+        },
+        {
+          "number": 465,
+          "title": "docs: credit @overgoy and @sethkimmel3 for reflection truncation work",
+          "url": "https://github.com/gepa-ai/gepa/pull/465",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-21T21:43:48Z",
+          "merged_at": "2026-09-21T21:43:48Z",
+          "author": "LakshyAAAgrawal"
+        },
+        {
+          "number": 462,
+          "title": "fix(reflection): reject known-incomplete proposals without breaking compatibility",
+          "url": "https://github.com/gepa-ai/gepa/pull/462",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-21T21:35:11Z",
+          "merged_at": "2026-09-21T21:35:11Z",
+          "author": "LakshyAAAgrawal"
+        },
+        {
+          "number": 464,
+          "title": "docs(blog): relabel guest byline as Community Blog Contributed by",
+          "url": "https://github.com/gepa-ai/gepa/pull/464",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-21T21:25:25Z",
+          "merged_at": "2026-09-21T21:25:17Z",
+          "author": "LakshyAAAgrawal"
+        },
+        {
+          "number": 456,
+          "title": "fix: avoid caching transient evaluation failures",
+          "url": "https://github.com/gepa-ai/gepa/pull/456",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-21T20:39:39Z",
+          "merged_at": null,
+          "author": "G-ChandraSekhar"
+        },
+        {
+          "number": 463,
+          "title": "docs(blog): nest guest posts under a Community section",
+          "url": "https://github.com/gepa-ai/gepa/pull/463",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-21T16:18:42Z",
+          "merged_at": "2026-09-21T16:18:41Z",
+          "author": "LakshyAAAgrawal"
+        },
+        {
+          "number": 458,
+          "title": "Add Sutro subjectivity gap/AI Functions blog post",
+          "url": "https://github.com/gepa-ai/gepa/pull/458",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-20T19:02:14Z",
+          "merged_at": null,
+          "author": "sethkimmel3"
+        }
+      ]
+    },
+    {
+      "repo": "OpenHands/software-agent-sdk",
+      "sampling": "8 most recently updated PRs, all states; not a count of activity or quality",
+      "pulls": [
+        {
+          "number": 5218,
+          "title": "feat(llm): refresh API key and retry once on a 401",
+          "url": "https://github.com/OpenHands/software-agent-sdk/pull/5218",
+          "state": "open",
+          "draft": true,
+          "updated_at": "2026-09-22T06:27:11Z",
+          "merged_at": null,
+          "author": "aivong-openhands"
+        },
+        {
+          "number": 5201,
+          "title": "fix(sdk): never resolve secrets on the event loop while masking",
+          "url": "https://github.com/OpenHands/software-agent-sdk/pull/5201",
+          "state": "closed",
+          "draft": false,
+          "updated_at": "2026-09-22T06:00:47Z",
+          "merged_at": null,
+          "author": "VascoSch92"
+        },
+        {
+          "number": 5215,
+          "title": "PLTF-3529: install tini on rpm/zypper base images",
+          "url": "https://github.com/OpenHands/software-agent-sdk/pull/5215",
+          "state": "open",
+          "draft": true,
+          "updated_at": "2026-09-22T05:06:27Z",
+          "merged_at": null,
+          "author": "aivong-openhands"
+        },
+        {
+          "number": 4287,
+          "title": "Add Pareto prompt meta-profile routing",
+          "url": "https://github.com/OpenHands/software-agent-sdk/pull/4287",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T04:49:34Z",
+          "merged_at": null,
+          "author": "juanmichelini"
+        },
+        {
+          "number": 4584,
+          "title": "fix: resolve provider connection credentials in GET /api/profiles/{name}",
+          "url": "https://github.com/OpenHands/software-agent-sdk/pull/4584",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T04:47:28Z",
+          "merged_at": null,
+          "author": "all-hands-bot"
+        },
+        {
+          "number": 4932,
+          "title": "fix(sdk): tolerate orphaned tool observations",
+          "url": "https://github.com/OpenHands/software-agent-sdk/pull/4932",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T04:32:57Z",
+          "merged_at": null,
+          "author": "hsusul"
+        },
+        {
+          "number": 5197,
+          "title": "fix(agent-server): evict idle Docker runtimes",
+          "url": "https://github.com/OpenHands/software-agent-sdk/pull/5197",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T04:09:24Z",
+          "merged_at": null,
+          "author": "neubig"
+        },
+        {
+          "number": 4713,
+          "title": "fix(tools): never delete a user-supplied browser profile dir on close()",
+          "url": "https://github.com/OpenHands/software-agent-sdk/pull/4713",
+          "state": "open",
+          "draft": false,
+          "updated_at": "2026-09-22T03:55:35Z",
+          "merged_at": null,
+          "author": "all-hands-bot"
+        }
+      ]
+    }
+  ]
+}
