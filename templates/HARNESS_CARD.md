@@ -73,11 +73,28 @@ Publish one of these next to every score. Adapted from the disclosure proposal i
 | Benchmark and version / commit | |
 | Task subset (list or file hash) | |
 | Trials per task (k) | |
-| Runner (Harbor / Claw-SWE-Bench / HAL / custom) and version | |
+| Runner (Harbor / Claw-SWE-Bench / HAL / HarnessRouter / custom) and version | |
 | Dates of runs | |
 | Exact command line | |
 | Trajectories | URL |
 | Rate card used for cost, and date | |
+
+## Provenance (fill in if the harness was evolved, searched, or tuned against a benchmark)
+
+Required whenever an outer loop (Meta-Harness, AHE, SoL-Pi, GEPA, ouroboros, a home-grown evoloop) or more than a few rounds of hand-iteration against a benchmark produced this harness. See "If your harness was evolved" in [`docs/benchmarking.md`](../docs/benchmarking.md) and [2607.12227](https://arxiv.org/abs/2607.12227) for why. Write "hand-written, not tuned against the reported benchmark" if it does not apply.
+
+| Field | Value |
+|---|---|
+| Seed harness (name, version / commit) | |
+| Outer-loop system and version | |
+| Proposer / evolving model(s), exact ID and effort | |
+| Development split used for evolution (task IDs or file hash) | |
+| Held-out split used for the reported numbers (task IDs or file hash) | must be disjoint from the development split |
+| Iterations and candidates evaluated | e.g. 10 iterations x 8 candidates |
+| Total inference spent on the campaign (tokens and $) | |
+| Matched-budget test-time-scaling control | seed harness given the same total budget at task time via best-of-n / retries; its score on the held-out split |
+| Components the loop was allowed to change | prompt only / tools / middleware / memory / loop code |
+| Selection criterion | what the loop optimised for, and on which split |
 
 ## Known limitations of this card
 
