@@ -1,6 +1,11 @@
 # Watchlist for the agent-harness ecosystem. Snapshot 2026-09-22.
 # Intended as input to a weekly digest script (see docs/monitoring.md), or just as a bookmark list.
-# layer: standard | runtime | config | curation | eval | infra | research
+#
+# Schema (enforced by scripts/check_sources.py, run in CI):
+#   github_repos[]:  repo (owner/name, canonical: the check fails on GitHub redirects),
+#                    layer, watch[] (releases | discussions | pulls | commits), note (optional)
+#   layer: standard | runtime | config | curation | eval | infra | research
+#   Every other top-level key is a free-form list; only its presence and type are checked.
 
 github_repos:
   # Layer 0: interop standards
@@ -57,12 +62,34 @@ github_repos:
   - repo: OpenHands/OpenHands
     layer: runtime
     watch: [releases]
-  - repo: sst/opencode
+  - repo: OpenHands/software-agent-sdk
+    layer: runtime
+    watch: [releases, pulls]
+    note: The SDK is where context/execution infrastructure and profile routing land; the product repo lags it.
+  - repo: anomalyco/opencode
     layer: runtime
     watch: [releases]
-  - repo: block/goose
+    note: Formerly sst/opencode.
+  - repo: code-yeongyu/oh-my-openagent
+    layer: config
+    watch: [releases, pulls]
+    note: OmO, orchestration layer on OpenCode. Sustainable Use License (source-available, not permissive OSS).
+  - repo: aaif-goose/goose
     layer: runtime
     watch: [releases]
+    note: Formerly block/goose.
+  - repo: openai/codex
+    layer: runtime
+    watch: [releases]
+    note: Codex CLI is open source; the one vendor coding harness you can read end to end.
+  - repo: PrimeIntellect-ai/prime-agent
+    layer: runtime
+    watch: [releases, discussions]
+    note: Persistent Python environment, recursive delegation; contributions go through Discussions.
+  - repo: PrimeIntellect-ai/verifiers
+    layer: eval
+    watch: [releases]
+    note: RL / eval environments adjacent to Prime Agent.
   - repo: langchain-ai/deepagents
     layer: runtime
     watch: [releases]
@@ -83,6 +110,22 @@ github_repos:
     layer: runtime
     watch: [releases]
     note: Budgeted evolution loop across 14 runtimes.
+  - repo: gastownhall/gascity
+    layer: infra
+    watch: [releases, discussions]
+    note: Composable supervision / orchestration primitives (Steve Yegge).
+  - repo: gastownhall/beads
+    layer: infra
+    watch: [releases]
+    note: Durable work state for agents; the store under Gas Town / Gas City.
+  - repo: agentclientprotocol/agent-client-protocol
+    layer: standard
+    watch: [releases]
+    note: ACP, editor-to-agent protocol.
+  - repo: agentskills/agentskills
+    layer: standard
+    watch: [releases]
+    note: SKILL.md specification.
 
   # Layer 3: automated harness design (research code)
   - repo: stanford-iris-lab/meta-harness
@@ -93,6 +136,18 @@ github_repos:
     layer: research
     watch: [releases, pulls]
     note: NVIDIA; auto-research-derived pi extension; benchmarks community PRs.
+  - repo: gepa-ai/gepa
+    layer: research
+    watch: [releases, discussions]
+    note: Reflective prompt/program optimizer; engine behind hermes-agent-self-evolution.
+  - repo: airbnb/agent-harness-optimizer
+    layer: research
+    watch: [commits]
+    note: System prompt + tool-call middleware optimisation with reproducible configs. Small.
+  - repo: A-EVO-Lab/AdaptiveHarness
+    layer: research
+    watch: [commits]
+    note: Adaptive Auto-Harness paper code (2606.01770); quiet since June.
   - repo: TokenRhythm/NeoHorse
     layer: research
     watch: [commits]
@@ -117,14 +172,11 @@ github_repos:
     layer: eval
     watch: [releases]
     note: Fixed-model, vary-harness; 6 harnesses x 8 models x 106 tasks.
-  - repo: opensquilla/claw-swe-bench
+  - repo: TokenRhythm/claw-swe-bench
     layer: eval
     watch: [releases, pulls]
-    note: Harness-neutral SWE-bench adapter; leaderboard at claw-swe-bench.github.io.
-  - repo: princeton-pli/hal-harness
-    layer: infra
-    watch: [releases]
-    note: Cost-aware eval harness; leaderboard paused for new models.
+    note: Formerly opensquilla/claw-swe-bench. Harness-neutral SWE-bench adapter; leaderboard at claw-swe-bench.github.io.
+  # princeton-pli/hal-harness was archived 2026-07-01; kept as a reference in docs/benchmarking.md, not watched.
   - repo: zli12321/LHTB
     layer: eval
     watch: [commits]
@@ -162,6 +214,7 @@ github_repos:
   - repo: nexu-io/harness-engineering-guide
     layer: curation
     watch: [discussions]
+    note: Reference guide; no pushes since 2026-04-19, so not a venue any more.
   - repo: Turi-Labs/awesome-harness
     layer: curation
     watch: [commits]
@@ -189,6 +242,7 @@ github_repos:
   - repo: sadsfae/awesome-claude-code
     layer: config
     watch: [commits]
+    note: Still the best-known index, but no push since 2026-03-21; expect stale entries.
   - repo: Chat2AnyLLM/awesome-claude-plugins
     layer: config
     watch: [commits]
@@ -199,6 +253,10 @@ github_repos:
     layer: config
     watch: [releases]
     note: Most-installed cross-runtime skill pack.
+  - repo: open-gsd/gsd-core
+    layer: config
+    watch: [releases]
+    note: Get Shit Done workflow; successor to archived gsd-build/get-shit-done.
   - repo: BioInfo/claudelicious
     layer: config
     watch: [commits]
@@ -221,17 +279,29 @@ github_repos:
     layer: config
     watch: [releases]
 
+  # Layer 2: personal harnesses on open runtimes (read the whole repo, not a snippet)
+  - repo: mitsuhiko/agent-stuff
+    layer: config
+    watch: [commits]
+    note: "Armin Ronacher's complete pi setup: extensions, skills, prompt commands."
+  - repo: davebcn87/pi-autoresearch
+    layer: config
+    watch: [releases]
+    note: Try / measure / keep-or-revert loop as a pi extension.
+  - repo: weijiafu14/pi2dsh
+    layer: config
+    watch: [releases]
+    note: pi extension interface on DeepSeek Harness; publishes a compatibility matrix.
+  - repo: fitchmultz/pi-tool-duration
+    layer: config
+    watch: [commits]
+    note: Exposes tool latency to the model. One small intervention, easy to A/B.
+
   # Layer 2: closed-CLI anatomy (primary sources on Claude Code's harness)
   - repo: Piebald-AI/claude-code-system-prompts
     layer: config
     watch: [commits]
     note: Updated within minutes of each Claude Code release; changelog across versions.
-  - repo: whanyu1212/claude-code-anatomy
-    layer: config
-    watch: [commits]
-  - repo: HaiDong-Once/claude-code-map
-    layer: config
-    watch: [commits]
 
 github_topics:
   - harness-engineering
@@ -359,7 +429,7 @@ leaderboards:
     axis: harness column per row; custom harnesses segregated
   - name: HAL
     url: https://hal.cs.princeton.edu/
-    axis: cost-aware; paused for new models
+    axis: cost-aware; paused for new models, harness repo archived 2026-07
   - name: SWE-bench bash-only
     url: https://www.swebench.com/
     axis: fixed harness (mini-swe-agent), vary model
@@ -399,12 +469,20 @@ chat:
     via: link in README of openclaw/openclaw
   - name: Hermes Agent Discord
     via: link in README of NousResearch/hermes-agent
+  - name: pi Discord and Discussions
+    via: link in README of earendil-works/pi; note the vouch process for new issue/PR contributors
   - name: oh-my-pi Discord
     via: link in README of can1357/oh-my-pi
+  - name: Prime Agent Discussions
+    via: https://github.com/PrimeIntellect-ai/prime-agent/discussions
+  - name: GEPA Discord
+    via: link in README of gepa-ai/gepa
+  - name: Gas City Discord
+    via: link in README of gastownhall/gascity
   - name: OpenCode Discord
-    via: link in README of sst/opencode
+    via: link in README of anomalyco/opencode
   - name: Goose Discord
-    via: link in README of block/goose
+    via: link in README of aaif-goose/goose
   - name: OpenHands Slack
     via: link in README of OpenHands/OpenHands
   - name: SWE-bench Slack
