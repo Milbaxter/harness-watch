@@ -15,6 +15,7 @@ How to stay on top of the open-source **agent harness** ecosystem, and how to te
 | [`sources.yml`](sources.yml) | Machine-readable watchlist: repos, feeds, queries, accounts. |
 | [`templates/HARNESS_CARD.md`](templates/HARNESS_CARD.md) | Disclosure template you should publish alongside any score. |
 | [`templates/RESULTS.md`](templates/RESULTS.md) | Results template for a harness-vs-harness comparison. |
+| [`reports/`](reports/) | Dated hotspot surveys; the raw findings behind each revision of the docs. Latest: [2026-09-22](reports/2026-09-22-hotspot-survey.md). |
 
 ## The two questions this repo exists to answer
 
