@@ -1,17 +1,52 @@
-# Watchlist for the agent-harness ecosystem. Snapshot 2026-09.
+# Watchlist for the agent-harness ecosystem. Snapshot 2026-09-22.
 # Intended as input to a weekly digest script (see docs/monitoring.md), or just as a bookmark list.
-# layer: runtime | config | curation | eval | infra
+# layer: standard | runtime | config | curation | eval | infra | research
 
 github_repos:
-  # Layer 1: runtimes
-  - repo: badlogic/pi-mono
+  # Layer 0: interop standards
+  - repo: HarnessRouter/harnessrouter
+    layer: standard
+    watch: [releases]
+    note: Reference implementation of the Unified Harness Protocol (UHP); one API over 10 harnesses.
+  - repo: harnessprotocol/harness-protocol
+    layer: standard
+    watch: [releases, discussions]
+    note: harness.yaml portable configuration spec. Different problem from UHP.
+  - repo: harnessprotocol/harness-kit
+    layer: standard
+    watch: [releases]
+
+  # Layer 1: runtimes (the three gravity wells)
+  - repo: deepseek-ai/deepseek-harness
     layer: runtime
     watch: [releases, discussions]
-    note: Minimal self-extensible harness; pi packages; author publishes sessions to HF.
+    note: Everything-is-a-plugin on Cordis; minimal / PTC / creative profiles; developer preview with breaking changes.
+  - repo: openclaw/openclaw
+    layer: runtime
+    watch: [releases]
+    note: Harnesses (Claude, Codex, local) are swappable plugins behind a gateway. OpenClaw Foundation.
+  - repo: openclaw/clawhub
+    layer: config
+    watch: [releases]
+    note: Skill and plugin registry; also hosts whole-agent Claw packages.
+  - repo: NousResearch/hermes-agent
+    layer: runtime
+    watch: [releases]
+    note: Self-improving harness; skills hub over 11 registries.
+
+  # Layer 1: coding-first runtimes
+  - repo: earendil-works/pi
+    layer: runtime
+    watch: [releases, discussions]
+    note: Formerly badlogic/pi-mono; npm scope @earendil-works. Minimal 4-tool harness; control arm in HarnessTax; SoL-Pi substrate.
   - repo: can1357/oh-my-pi
     layer: runtime
     watch: [releases]
-    note: Fast-moving pi fork, coding-first, ~80k weekly npm downloads (2026-08).
+    note: Fast-moving pi fork, coding-first.
+  - repo: zai-org/ZCode
+    layer: runtime
+    watch: [releases]
+    note: Z.ai's open coding-agent harness, released 2026-09-20.
   - repo: SWE-agent/mini-swe-agent
     layer: runtime
     watch: [releases]
@@ -28,6 +63,42 @@ github_repos:
   - repo: block/goose
     layer: runtime
     watch: [releases]
+  - repo: langchain-ai/deepagents
+    layer: runtime
+    watch: [releases]
+    note: Library, not CLI; included because it self-describes as an agent harness.
+  - repo: context-labs/whip
+    layer: runtime
+    watch: [releases]
+    note: Single-binary Go harness for open-weight models.
+
+  # Layer 1: control planes / meta-harnesses
+  - repo: loopx-project/loopx
+    layer: runtime
+    watch: [releases]
+  - repo: AMAP-ML/LongHorizon-Harness
+    layer: runtime
+    watch: [releases]
+  - repo: Q00/ouroboros
+    layer: runtime
+    watch: [releases]
+    note: Budgeted evolution loop across 14 runtimes.
+
+  # Layer 3: automated harness design (research code)
+  - repo: stanford-iris-lab/meta-harness
+    layer: research
+    watch: [releases, commits]
+    note: Meta-Harness; outer-loop search over harness code; TB2 reference experiment.
+  - repo: NVlabs/SoL-Pi
+    layer: research
+    watch: [releases, pulls]
+    note: NVIDIA; auto-research-derived pi extension; benchmarks community PRs.
+  - repo: TokenRhythm/NeoHorse
+    layer: research
+    watch: [commits]
+  - repo: CosmosMind-ai/RSI-Harness
+    layer: research
+    watch: [commits]
 
   # Layer 3: eval infrastructure and benchmarks
   - repo: harbor-framework/harbor
@@ -37,7 +108,11 @@ github_repos:
   - repo: harbor-framework/terminal-bench-2-1
     layer: eval
     watch: [releases, pulls]
-    note: Watch for successor repos (TB 3.x, 4.x) and submission-window changes.
+    note: Watch for TB 3.x successor repo and submission-window changes.
+  - repo: QoderAI/better-harness
+    layer: infra
+    watch: [releases]
+    note: Harnesses as code, controlled experiments; config-layer A/B.
   - repo: Qihoo360/harness-bench
     layer: eval
     watch: [releases]
@@ -50,24 +125,43 @@ github_repos:
     layer: infra
     watch: [releases]
     note: Cost-aware eval harness; leaderboard paused for new models.
+  - repo: zli12321/LHTB
+    layer: eval
+    watch: [commits]
+    note: Long-Horizon Terminal-Bench; segregates custom-harness runs.
   - repo: reacher-z/HarnessBench
     layer: eval
     watch: [commits]
-    note: WIP fixed-model harness board for everyday online tasks.
   - repo: nyosegawa/harness-bench
     layer: eval
     watch: [commits]
-    note: Real-repo debugging tasks targeting Codex / Claude Code / Cursor / Antigravity; results pending.
   - repo: namanvats/scaffold-effects
     layer: eval
     watch: [commits]
-    note: Data and scripts for The Scaffold Effect paper.
 
   # Layer 3: curation
+  - repo: ai-boost/awesome-harness-engineering
+    layer: curation
+    watch: [commits]
+    note: Largest awesome-list for the topic.
+  - repo: walkinglabs/learn-harness-engineering
+    layer: curation
+    watch: [releases]
+    note: 12-lesson course, 14 languages.
+  - repo: walkinglabs/awesome-harness-engineering
+    layer: curation
+    watch: [commits]
+  - repo: RyanAlberts/best-of-Agent-Harnesses
+    layer: curation
+    watch: [commits]
+    note: Ranked, rescored weekly, MCP server + llms.txt.
+  - repo: cobusgreyling/loop-engineering
+    layer: curation
+    watch: [commits]
+    note: Hub for the sibling term.
   - repo: nexu-io/harness-engineering-guide
     layer: curation
     watch: [discussions]
-    note: Closest thing to a forum for harness engineering.
   - repo: Turi-Labs/awesome-harness
     layer: curation
     watch: [commits]
@@ -77,6 +171,19 @@ github_repos:
   - repo: Picrew/awesome-agent-harness
     layer: curation
     watch: [commits]
+  - repo: lobehub/awesome-rsi
+    layer: curation
+    watch: [commits]
+  - repo: awesome-dsh-plugin/awesome-dsh-plugin
+    layer: curation
+    watch: [commits]
+  - repo: Zhiyuan-Fan/Awesome-DeepSeek-Harness-Plugins
+    layer: curation
+    watch: [commits]
+  - repo: Electricitysheep/dsh-handbook
+    layer: curation
+    watch: [commits]
+    note: Includes same-model multi-agent comparisons on dsh.
 
   # Layer 2: config-layer hubs
   - repo: sadsfae/awesome-claude-code
@@ -85,48 +192,79 @@ github_repos:
   - repo: Chat2AnyLLM/awesome-claude-plugins
     layer: config
     watch: [commits]
-    note: Tracks ~190 Claude Code plugin marketplaces.
   - repo: sergeykrin9/awesome-claude-code-workflows
     layer: config
     watch: [commits]
+  - repo: obra/superpowers
+    layer: config
+    watch: [releases]
+    note: Most-installed cross-runtime skill pack.
   - repo: BioInfo/claudelicious
     layer: config
     watch: [commits]
-    note: Example of publishing a whole harness with reasoning.
+  - repo: maxritter/pilot-shell
+    layer: config
+    watch: [releases]
+  - repo: first-fluke/oh-my-agent
+    layer: config
+    watch: [releases]
+  - repo: revfactory/harness
+    layer: config
+    watch: [releases]
   - repo: hgflima/harness-lab
     layer: config
     watch: [releases]
   - repo: madebywild/agent-harness
     layer: config
     watch: [releases]
-  - repo: ar27111994/agent-harness
-    layer: config
-    watch: [releases]
   - repo: eooo-io/orkestr
     layer: config
     watch: [releases]
 
+  # Layer 2: closed-CLI anatomy (primary sources on Claude Code's harness)
+  - repo: Piebald-AI/claude-code-system-prompts
+    layer: config
+    watch: [commits]
+    note: Updated within minutes of each Claude Code release; changelog across versions.
+  - repo: whanyu1212/claude-code-anatomy
+    layer: config
+    watch: [commits]
+  - repo: HaiDong-Once/claude-code-map
+    layer: config
+    watch: [commits]
+
 github_topics:
   - harness-engineering
   - agent-harness
+  - loop-engineering
+  - dsh-plugin
+  - cordis
   - pi-package
   - claude-code-plugin
   - coding-agent
 
+# Topic tags are gamed. Always AND a description/README keyword with the topic,
+# and drop repos whose description does not mention agent/harness/coding at all.
 github_repo_searches:
   # append pushed:>YYYY-MM-DD for the last 7 days
-  - 'topic:harness-engineering'
-  - 'topic:agent-harness'
+  - 'topic:harness-engineering harness in:description'
+  - 'topic:agent-harness harness in:description'
+  - 'topic:loop-engineering agent in:description'
+  - 'topic:dsh-plugin harness in:description'
   - 'topic:pi-package'
   - '"agent harness" in:description,readme stars:>20'
-  - '"harness" "coding agent" in:readme created:>2026-01-01'
+  - '"harness" "coding agent" in:readme created:>2026-06-01'
   - '"harness card" in:readme'
+  - '"harness evolution" OR "meta-harness" OR "auto-research" harness in:readme'
+  - '"unified harness protocol" OR uhp harness in:readme'
 
 github_code_searches:
   - 'path:.claude/skills filename:SKILL.md'
   - 'filename:AGENTS.md "harness"'
   - 'path:.pi/ extension:ts'
   - 'path:.cursor/rules'
+  - 'filename:harness.yaml "$schema" harnessprotocol'
+  - 'filename:cordis.yml dsh'
   - '"BaseInstalledAgent" language:Python'
   - '"BaseClawAdapter" language:Python'
 
@@ -134,7 +272,14 @@ npm_keywords:
   - pi-package
   - harness-engineering
   - agent-harness
+  - loop-engineering
+  - dsh-plugin
   - claude-code-plugin
+
+npm_packages:
+  - '@earendil-works/pi-coding-agent'
+  - '@oh-my-pi/pi-coding-agent'
+  - '@deepseek-ai/dsh'
 
 pypi_release_feeds:
   - https://pypi.org/rss/project/mini-swe-agent/releases.xml
@@ -147,26 +292,45 @@ arxiv_queries:
   - 'abs:"scaffold" AND (abs:"SWE-bench" OR abs:"Terminal-Bench")'
   - 'abs:"harness card"'
   - 'abs:"fixed model" AND abs:"harness"'
+  - 'abs:"harness evolution" OR abs:"meta-harness" OR abs:"harness optimization"'
+  - 'abs:"harness tax"'
 
 arxiv_anchor_papers:
   # follow forward citations via Semantic Scholar
   - id: 2510.11977
     title: Holistic Agent Leaderboard (HAL)
+  - id: 2603.28052
+    title: "Meta-Harness: End-to-End Optimization of Model Harnesses"
+  - id: 2604.25850
+    title: "Agentic Harness Engineering (AHE)"
   - id: 2605.23950
     title: Stop Comparing LLM Agents Without Disclosing the Harness
   - id: 2605.27922
     title: Harness-Bench
   - id: 2606.12344
     title: Claw-SWE-Bench
+  - id: 2607.12227
+    title: Rethinking the Evaluation of Harness Evolution for Agents
   - id: 2607.22585
     title: The Scaffold Effect in Coding Agents
+  - id: 2608.25512
+    title: A Programming Paradigm for Spatiotemporal Composability (Cordis)
+  - id: 2609.20519
+    title: "SoL-Pi: Scaling Auto-Research Loops for Efficient Agent Harnesses"
   - id: 2609.20804
     title: An Empirical Study of Harness Design for Coding Agents
+
+non_arxiv_studies:
+  - name: HarnessTax
+    url: https://harnesstax.github.io/
+    note: UC Berkeley Sky Lab + Arena.ai, 2026-09-16. 21 model x harness pairs across Claude Code, Codex CLI, pi.
 
 huggingface:
   datasets:
     - harborframework/terminal-bench-2.0
     - TokenRhythm/Claw-SWE-Bench
+    - IntelligenceLab/Long-Horizon-Terminal-Bench
+    - IntelligenceLab/LHTB-leaderboard
     - badlogicgames/pi-mono
   search_terms:
     - terminal-bench
@@ -175,15 +339,24 @@ huggingface:
     - pi-share-hf
 
 leaderboards:
-  - name: Terminal-Bench
+  - name: Terminal-Bench (official)
     url: https://www.tbench.ai/leaderboard
-    axis: vary model, harness disclosed per entry
+    axis: vary model, harness + version disclosed per entry
+  - name: Terminal-Bench 2.1 on vals.ai
+    url: https://www.vals.ai
+    axis: fixed harness (Terminus 2), vary model
+  - name: HarnessTax
+    url: https://harnesstax.github.io/
+    axis: fixed model, vary harness (Claude Code / Codex CLI / pi); one-off
   - name: Harness-Bench
     url: https://www.harness-bench.ai/leaderboard.html
     axis: fixed protocol, model x harness pairs
   - name: Claw-SWE-Bench
     url: https://claw-swe-bench.github.io/
     axis: harness as controlled variable on SWE-bench
+  - name: LHTB
+    url: https://zli12321.github.io/LHTB/leaderboard.html
+    axis: harness column per row; custom harnesses segregated
   - name: HAL
     url: https://hal.cs.princeton.edu/
     axis: cost-aware; paused for new models
@@ -191,13 +364,41 @@ leaderboards:
     url: https://www.swebench.com/
     axis: fixed harness (mini-swe-agent), vary model
 
+standards:
+  - name: Unified Harness Protocol
+    url: https://unifiedharnessprotocol.org/
+  - name: Harness Protocol (harness.yaml)
+    url: https://harnessprotocol.io/
+  - name: Agent Skills (SKILL.md)
+    url: https://agentskills.io
+
 blogs_and_posts:
+  - https://openai.com/index/harness-engineering/
   - https://www.anthropic.com/engineering/infrastructure-noise
+  - https://addyosmani.com/blog/agent-harness-engineering/
+  - https://harnesstax.github.io/
+  - https://nvlabs.github.io/SoL-Pi/
   - https://www.thedeepfeed.ai/posts/2026-06-22-how-much-is-the-harness-worth-measuring-agent-scaffolds/
   - https://harness-guide.com
+  - https://deepseek.com/harness/
   - https://www.tbench.ai/news
+  # Mitchell Hashimoto, "My AI Adoption Journey" (2026-02-05) and Birgitta Boeckeler's
+  # harness-engineering pieces on martinfowler.com are the other founding posts.
+
+hacker_news_searches:
+  # hn.algolia.com, sort by date
+  - '"harness" coding agent'
+  - 'harness engineering'
+  - 'harnesstax'
+  - 'meta-harness'
 
 chat:
+  - name: DeepSeek Harness Discord
+    via: link in README of deepseek-ai/deepseek-harness
+  - name: OpenClaw Discord
+    via: link in README of openclaw/openclaw
+  - name: Hermes Agent Discord
+    via: link in README of NousResearch/hermes-agent
   - name: oh-my-pi Discord
     via: link in README of can1357/oh-my-pi
   - name: OpenCode Discord
@@ -209,9 +410,37 @@ chat:
   - name: SWE-bench Slack
     via: link on swebench.com
 
+regional:
+  - region: CN
+    sources:
+      - https://deepseek-harness.github.io/deepseek-harness/
+      - github.com/topics/dsh-plugin (filter by description)
+  - region: KR
+    sources:
+      - https://discuss.pytorch.kr (search 하네스)
+      - LangChain Korea meetups (Harness Engineering Korea)
+  - region: JP
+    sources:
+      - https://zenn.dev (search ハーネスエンジニアリング)
+
 x_search_terms:
   - '"harness engineering"'
   - '"agent harness"'
+  - '"loop engineering"'
   - '"scaffold effect"'
+  - '"harness tax"'
   - '"harness card"'
+  - '"meta-harness"'
   - 'terminal-bench harness'
+
+x_accounts_seed:
+  # maintainers and authors; see docs/landscape.md "People"
+  - badlogic
+  - can1357
+  - steipete
+  - mitsuhiko
+  - obra
+  - mitchellh
+  - PiebaldAI
+  - NousResearch
+  - deepseek_ai
