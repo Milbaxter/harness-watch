@@ -16,6 +16,8 @@ How to stay on top of the open-source **agent harness** ecosystem, and how to te
 | [`templates/HARNESS_CARD.md`](templates/HARNESS_CARD.md) | Disclosure template you should publish alongside any score. |
 | [`templates/RESULTS.md`](templates/RESULTS.md) | Results template for a harness-vs-harness comparison. |
 | [`reports/`](reports/) | Dated hotspot surveys; the raw findings behind each revision of the docs. Latest: [2026-09-22](reports/2026-09-22-hotspot-survey.md). |
+| [`CHANGELOG.md`](CHANGELOG.md) | What changed in the map and why. The thing `monitoring.md` tells you to keep. |
+| [`scripts/check_sources.py`](scripts/check_sources.py) | CI check: schema, broken links, and canonical repo names (fails on silent GitHub renames, 404s, archived repos). |
 
 ## The two questions this repo exists to answer
 
@@ -31,6 +33,8 @@ Partially. HarnessTax (UC Berkeley Sky Lab + Arena.ai, 2026-09-16) is the first 
 ## Status
 
 Snapshot as of 2026-09-22. The landscape moves monthly; PRs that fix stale links or add sources are welcome. Everything here is opinionated and unaffiliated with any of the projects mentioned.
+
+To contribute a source: add it to [`sources.yml`](sources.yml) under the right layer with a one-line `note` saying why it earns a slot, mention it in the relevant doc, add a line to [`CHANGELOG.md`](CHANGELOG.md), and run `python3 scripts/check_sources.py`. Star counts belong in a dated report, not in the watchlist.
 
 ## License
 

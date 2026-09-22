@@ -66,7 +66,17 @@ Two or three representative failed trajectories per dominant tag, with one sente
 
 ## Control arm (recommended)
 
-Same table for mini-swe-agent (or the benchmark's neutral reference agent) on the same model. If neither A nor B beats it on the primary metric, say so.
+Same table for a deliberately minimal harness on the same model: mini-swe-agent, pi with its default four tools, DeepSeek Harness `sdk-minimal`, or the benchmark's neutral reference agent. If neither A nor B beats it on the primary metric, say so.
+
+## Evolved-harness controls (required if A or B was evolved or benchmark-tuned)
+
+| | Development split | Held-out split |
+|---|---|---|
+| Evolved harness | | **headline number goes here** |
+| Seed harness, single shot | | |
+| Seed harness, matched inference budget (best-of-n / retries at task time, same total tokens as the evolution campaign) | | |
+
+State the campaign cost (iterations, candidates, total tokens) and link the Provenance section of the Harness Card. If the evolved harness does not beat the matched-budget seed on the held-out split, the honest claim is "found a benchmark-specific configuration", not "better harness".
 
 ## Second model (recommended)
 
