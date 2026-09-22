@@ -10,12 +10,14 @@ Read these numbers before designing an experiment; they set your noise floor.
 |---|---|---|
 | Harness variance vs model variance, SWE-bench Verified, 3x3 factorial | 7.8x larger; 6 of 9 model rankings flip | [2605.23950](https://arxiv.org/abs/2605.23950) |
 | Same model, different harness, Terminal-Bench Pro | 2-8 pp pass rate; up to **40x** tokens per solved task | [2607.22585](https://arxiv.org/abs/2607.22585) |
+| Same model across Claude Code / Codex CLI / pi, SWE-bench Lite and TB 2.0 | +/-2 pp and +/-5 pp pass rate; up to **5x** cost; vendor harness loses to a foreign one in 9 of 12 comparisons | [HarnessTax](https://harnesstax.github.io/) |
 | Same model, adapter design only, SWE-bench | 19.1% to 73.4% Pass@1 | [2606.12344](https://arxiv.org/abs/2606.12344) |
+| Automated harness evolution vs matched-budget test-time scaling, TB 2.1 | No consistent advantage; limited generalisation to held-out tasks | [2607.12227](https://arxiv.org/abs/2607.12227) |
 | Container CPU/RAM limits only, Terminal-Bench 2.0 | up to 6 pp | [Anthropic](https://www.anthropic.com/engineering/infrastructure-noise) |
 | Broken SWE-bench test cases | 24.4% of Verified gradings changed after fixing | UTBoost, ACL 2025 |
 | Typical "meaningful" model upgrade reported in papers | 2-4 pp | [2605.23950](https://arxiv.org/abs/2605.23950) |
 
-Implications: a 3-point pass-rate difference between two harnesses on 50 tasks with one trial each is noise. Cost and failure mode differences are usually larger and more reproducible than pass-rate differences.
+Implications: a 3-point pass-rate difference between two harnesses on 50 tasks with one trial each is noise. Cost and failure mode differences are usually larger and more reproducible than pass-rate differences. HarnessTax and the Scaffold Effect agree on this from opposite ends: the harness changes what you pay far more than what you get.
 
 ## The protocol
 
@@ -45,7 +47,7 @@ Write all of this down in a [Harness Card](../templates/HARNESS_CARD.md) for eac
 
 ### 3. Run enough trials
 
-- **k = 5 trials per task minimum.** Terminal-Bench requires this for submissions and it is the practical floor for stable estimates.
+- **k = 5 trials per task minimum.** Terminal-Bench requires this for submissions and it is the practical floor for stable estimates. (HarnessTax used k=3 on 30 tasks and reports bootstrap CIs; treat that as the floor for a *published* one-off, not for a claim of superiority.)
 - **50 to 100 tasks** if you want to detect differences under 10 pp. Fewer tasks is fine for iterating on your own harness but not for claiming victory.
 - Run harness A and harness B on the **same task instances in the same window**. Provider behaviour drifts week to week.
 
@@ -61,7 +63,7 @@ For every run: input tokens, output tokens, cached tokens, dollar cost at a stat
 - dollars per solved task
 - pass rate at 50% and 25% of the full budget (cut the trajectory and check if it had already succeeded)
 
-The Scaffold Effect result (40x token spread, 2-8 pp pass spread) is the norm, not the exception. A harness that is 1 pp worse at a tenth of the cost is the better harness for most users.
+The Scaffold Effect result (40x token spread, 2-8 pp pass spread) and the HarnessTax result (5x cost spread, 2-5 pp pass spread) are the norm, not the exception. A harness that is 1 pp worse at a tenth of the cost is the better harness for most users.
 
 ### 6. Classify failures
 
@@ -84,6 +86,15 @@ Harness fingerprints are stable across models (Scaffold Effect: Goose fails on r
 ### 7. Publish trajectories
 
 Upload raw trajectories (Harbor Hub, Hugging Face, or a tarball in the repo). Anyone claiming a harness result without trajectories is asking you to trust them. Include the exact command line.
+
+## If your harness was evolved, searched or auto-tuned
+
+This applies to anything produced by a Meta-Harness, AHE, SoL-Pi, ouroboros or home-grown "evoloop" style outer loop, and to any harness you iterated on against a benchmark by hand for more than a few rounds. [Rethinking the Evaluation of Harness Evolution](https://arxiv.org/abs/2607.12227) showed that evolution gains on Terminal-Bench 2.1 largely disappeared against fair controls. Two extra rules:
+
+1. **Hold out tasks.** Split the task set before the first iteration. Evolve on the development split only. Report the held-out split as the headline number. If you only have one public benchmark, evolve on one benchmark and report on another (AHE evolved on TB2 and reported transfer to SWE-bench Verified; that is the right shape).
+2. **Add a matched-budget test-time-scaling control.** Harness evolution is a search that spends inference on feedback. Give the *seed* harness the same total inference budget as the evolution campaign spent, via best-of-n, retries or self-consistency at task time, and compare against that, not against a single-shot seed. If the evolved harness does not beat the scaled seed on the held-out split, the evolution found a benchmark-specific configuration, not a better harness.
+
+Also disclose the proposer model (Meta-Harness and AHE both use a frontier model as the evolving agent), the number of iterations and candidates, and the total tokens spent on the campaign. Those belong in the Harness Card.
 
 ## Tooling that exists today
 
@@ -108,6 +119,10 @@ harbor run \
 Run the same command with `-a <joes-agent>`. Check sandbox resource limits in the task configs and raise them uniformly if you are below 3x.
 
 Terminal-Bench is terminal-task heavy (bio, security, systems), not repo-editing heavy. If your harness is a coding agent, pair it with a SWE-style set.
+
+### HarnessRouter / UHP (one API in front of many harnesses)
+
+[HarnessRouter Community Edition](https://github.com/HarnessRouter/harnessrouter) implements the [Unified Harness Protocol](https://unifiedharnessprotocol.org/) and exposes a Responses-compatible HTTP API over Claude Code, Codex, Hermes, pi, dsh, OpenCode, Qwen Code, Cline, Gemini CLI and oh-my-pi. For a harness-vs-harness run this replaces N bespoke adapters with one: configure each harness (base + model + instructions + limits) as a UHP harness object, then drive them all from the same task loop. It does not make the closed CLIs' internal settings visible, so still record what you could not pin in the Harness Card.
 
 ### Claw-SWE-Bench (SWE-bench with a harness-neutral adapter)
 
@@ -134,9 +149,19 @@ The runner enforces the fairness properties for you: identical prompt, no networ
 
 [princeton-pli/hal-harness](https://github.com/princeton-pli/hal-harness): framework-agnostic wrapper with Weave cost tracking across SWE-bench Verified Mini, USACO, tau-bench, CORE-bench and more. The leaderboard is paused for new models but the harness works and its cost accounting is the best of the three.
 
-### mini-swe-agent as a control
+### better-harness (experiments as code)
 
-Always include [mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent) as a third arm. It is ~100 lines, bash-only, and scores >74% on SWE-bench Verified with frontier models. If your harness does not beat it on your chosen metric with the same model, your harness is adding cost without adding capability. This is the single most useful sanity check available.
+[QoderAI/better-harness](https://github.com/QoderAI/better-harness) lets you define harness variants as code, run controlled experiments, and inspect evidence per task. Aimed at Claude Code / Codex / Cursor config-layer variants, which is exactly gap 2 in [`providers.md`](providers.md). Newer and less battle-tested than Harbor; useful for the config-layer A/B where Harbor is overkill.
+
+### Minimal control arms
+
+Always include at least one deliberately minimal harness as a third arm:
+
+- [mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent): ~100 lines, bash-only, >74% on SWE-bench Verified with frontier models.
+- [pi](https://github.com/earendil-works/pi) with default four tools: HarnessTax puts it on the Pareto frontier on both SWE-bench Lite and TB 2.0.
+- DeepSeek Harness minimal profile (`sdk-minimal`): one shell tool and one edit tool, shipped by the lab specifically for benchmarking.
+
+If your harness does not beat the minimal arm on your chosen metric with the same model, your harness is adding cost without adding capability. This is the single most useful sanity check available.
 
 ## Private task sets
 
@@ -157,9 +182,13 @@ Fifty private tasks with k=5 is 250 trajectories per harness, roughly an afterno
 - **Reading the pass rate only.** Report cost, latency and fingerprint or do not report.
 - **Trusting weak verifiers.** If a task's hidden tests pass on a wrong patch, both harnesses look better and the comparison is noise.
 - **Single-model conclusions.** Harness rankings invert between strong and weak models (planning helps weak models, costs strong ones; predefined tools help weak-bash models, bash-only is cheaper for strong ones). Test two.
+- **Evolving and evaluating on the same tasks.** See the section above. This is the trap the whole auto-harness literature is currently arguing about.
+- **Assuming the vendor harness is the ceiling.** HarnessTax: 9 of 12 times it was not.
 
 ## Minimal honest claim
 
 "Harness A vs harness B, model M at effort E, on task set T (commit X), k=5, budget B, sandbox S at 3x resources. A: pass 61% [55, 67], 210k tokens/solve. B: pass 58% [52, 64], 1.4M tokens/solve. Paired difference +3 pp [-2, +8]. A's failures are mostly `WRONG_VERIFY`; B's are `IDLE_LOOP`. Trajectories: <link>. Harness Cards: <link>."
 
-That sentence is more information than most leaderboards give you, and it takes one afternoon to produce. Use [`templates/RESULTS.md`](../templates/RESULTS.md).
+If A was evolved: "...evolved on split T-dev over N iterations with proposer P spending K tokens; numbers above are on held-out T-test; seed harness with matched inference budget scored 59% [53, 65]."
+
+That is more information than most leaderboards give you, and it takes one afternoon to produce. Use [`templates/RESULTS.md`](../templates/RESULTS.md).
