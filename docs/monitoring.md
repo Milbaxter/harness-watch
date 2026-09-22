@@ -32,15 +32,32 @@ The problem is not lack of information, it is that the signal is spread over six
 
 Standards: `HarnessRouter/harnessrouter`, `harnessprotocol/harness-protocol`.
 
-Core runtimes: `deepseek-ai/deepseek-harness`, `earendil-works/pi`, `can1357/oh-my-pi`, `openclaw/openclaw`, `NousResearch/hermes-agent`, `zai-org/ZCode`, `SWE-agent/mini-swe-agent`, `OpenHands/OpenHands`, `sst/opencode`, `block/goose`.
+Core runtimes: `deepseek-ai/deepseek-harness`, `earendil-works/pi`, `can1357/oh-my-pi`, `openclaw/openclaw`, `NousResearch/hermes-agent`, `zai-org/ZCode`, `PrimeIntellect-ai/prime-agent`, `SWE-agent/mini-swe-agent`, `OpenHands/OpenHands`, `OpenHands/software-agent-sdk`, `anomalyco/opencode`, `aaif-goose/goose`, `openai/codex`.
 
-Automated harness design: `stanford-iris-lab/meta-harness`, `NVlabs/SoL-Pi`.
+Automated harness design: `stanford-iris-lab/meta-harness`, `NVlabs/SoL-Pi`, `gepa-ai/gepa`.
 
-Benchmarks and eval infra: `harbor-framework/harbor`, `harbor-framework/terminal-bench-2-1` (and successors), `QoderAI/better-harness`, `Qihoo360/harness-bench`, `opensquilla/claw-swe-bench`, `princeton-pli/hal-harness`, `zli12321/LHTB`.
+Benchmarks and eval infra: `harbor-framework/harbor`, `harbor-framework/terminal-bench-2-1` (and successors), `QoderAI/better-harness`, `Qihoo360/harness-bench`, `TokenRhythm/claw-swe-bench`, `zli12321/LHTB`.
 
-Curation: `ai-boost/awesome-harness-engineering`, `RyanAlberts/best-of-Agent-Harnesses`, `nexu-io/harness-engineering-guide` (Discussions), `Piebald-AI/claude-code-system-prompts` (commits; one per Claude Code release).
+Curation: `ai-boost/awesome-harness-engineering`, `RyanAlberts/best-of-Agent-Harnesses`, `Piebald-AI/claude-code-system-prompts` (commits; one per Claude Code release).
 
 Use GitHub's per-repo "Custom" watch and tick only Releases and Discussions. Everything else is noise. For `deepseek-harness` and `openclaw`, Discussions alone will be high-volume; skim the pinned and announcement categories only.
+
+### Saved pull-request searches (find design work before it ships)
+
+Releases tell you what landed. The design argument happens in the PR body weeks earlier, and on the big runtimes most PRs are maintenance. Filter by mechanism, not by repo:
+
+```
+repo:earendil-works/pi is:pr compaction OR "context window"
+repo:can1357/oh-my-pi is:pr cache OR "prompt cache"
+repo:deepseek-ai/deepseek-harness is:pr profile OR plugin lifecycle
+repo:PrimeIntellect-ai/prime-agent is:pr router OR delegate
+repo:OpenHands/software-agent-sdk is:pr routing OR condenser
+repo:NousResearch/hermes-agent is:pr hook OR veto OR timeout
+repo:gepa-ai/gepa is:pr reflection OR proposal
+repo:langchain-ai/deepagents is:pr harness
+```
+
+Read the PR body, not the diff. If it states the question being tested and how it will be measured, it is worth a note in your changelog even if it never merges. Four seams recur across these repos in 2026-09: context economics (caching, compaction), portable extensions (one package across hosts), bounded delegation (fast/slow model routing), and trustworthy feedback loops (what the model is shown about its own actions).
 
 ### Saved repository searches
 
@@ -143,7 +160,9 @@ You can do all of the above by hand in 30 minutes a week. If you want a digest:
 2. A weekly GitHub Action or cron job pulls: new releases for watched repos (GitHub REST `releases/latest`), the canonical `full_name` for each watched repo (alert on rename), new repos matching each saved search (GitHub search API, `pushed:>` last 7 days, post-filtered on description keywords), new arXiv results (arXiv API query, `submittedDate` window), npm search by keyword and weekly downloads for the pinned packages, HN Algolia search for the week.
 3. Diff against last week's snapshot, write a Markdown digest, open it as an issue or send it to yourself.
 
-This repo deliberately ships the list and the method rather than the script; the script is 100 lines of whatever language you already have a scheduler for, and it goes stale slower if you own it.
+This repo deliberately ships the list and the method rather than the digest script; the script is 100 lines of whatever language you already have a scheduler for, and it goes stale slower if you own it.
+
+What the repo *does* ship is the part that keeps the list honest: [`scripts/check_sources.py`](../scripts/check_sources.py) validates `sources.yml` against the schema in the file header, resolves every `github_repos` entry through the API and fails on renames (`sst/opencode` -> `anomalyco/opencode`), 404s and archived repos, flags repos with no push in 180 days, and checks that relative links in `docs/` and `templates/` resolve. It runs on every PR and weekly via [`.github/workflows/check-sources.yml`](../.github/workflows/check-sources.yml); the weekly run opens an issue when something drifts. Run it locally with `GITHUB_TOKEN=... python3 scripts/check_sources.py`.
 
 ## What to record when something new shows up
 

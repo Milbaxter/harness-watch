@@ -32,8 +32,8 @@ These did not exist when most of the awesome-lists were written. They matter bec
 |---|---|---|
 | [Unified Harness Protocol (UHP)](https://unifiedharnessprotocol.org/) | *Driving* a complete harness over HTTP: discovery, tasks, streaming, sessions, files, artifacts, cancellation, errors. Not a model API, not MCP. | Draft `2026-08-11`, 11 chapters, 75-check conformance suite. Reference implementation [HarnessRouter](https://github.com/HarnessRouter/harnessrouter) (Apache-2.0, Aug 2026) exposes a Responses-compatible API over Claude Code, Codex, Hermes, pi, dsh, OpenCode, Qwen Code, Cline, Gemini CLI, oh-my-pi. Adapter support there is not native adoption by those projects. |
 | [Harness Protocol](https://harnessprotocol.io/) | *Configuring* a harness: a vendor-neutral `harness.yaml` for instructions, skills, plugins, MCP servers, env, permissions, governance. Compiles to Claude Code, Cursor, Copilot, Codex, OpenCode, Windsurf, Gemini CLI, Junie. | Schema v1 current; exchange and registry layers planned. [harness-kit](https://github.com/harnessprotocol/harness-kit) is the CLI. |
-| [agentskills.io](https://agentskills.io) `SKILL.md` | The skill file format. Adopted by Claude Code, Codex, Hermes, OpenClaw, pi, OpenCode and most Layer 2 registries. | De facto won. This is the portable unit for Layer 2 assets. |
-| ACP (Agent Client Protocol) | Editor-to-agent protocol (Zed lineage). DeepSeek Harness ships an `acp` profile. | Adopted by several runtimes; relevant if you want to swap harnesses under one editor. |
+| [agentskills.io](https://agentskills.io) `SKILL.md` ([spec repo](https://github.com/agentskills/agentskills)) | The skill file format. Adopted by Claude Code, Codex, Hermes, OpenClaw, pi, OpenCode and most Layer 2 registries. | De facto won. This is the portable unit for Layer 2 assets. |
+| [ACP (Agent Client Protocol)](https://github.com/agentclientprotocol/agent-client-protocol) | Editor-to-agent protocol (Zed lineage). DeepSeek Harness ships an `acp` profile. | Adopted by several runtimes; relevant if you want to swap harnesses under one editor. |
 | txcript (Skillsync) | Translates whole *sessions* (history, tool calls, results) between Claude Code, Codex, OpenCode, Cursor and others. Explicitly does not carry system prompts or tools, which is a useful operational definition of "the harness". | Open-source Rust core. |
 
 ## Layer 1: Open runtimes
@@ -57,8 +57,10 @@ These are the projects where the loop, tools, context policy and stop conditions
 | [zai-org/ZCode](https://github.com/zai-org/ZCode) | Z.ai's open coding-agent harness, released 2026-09-20. Lab-shipped open harnesses are now a pattern (DeepSeek, Z.ai, [esengine/DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix)). Watch for GLM-specific harness design decisions. | GitHub |
 | [SWE-agent/mini-swe-agent](https://github.com/SWE-agent/mini-swe-agent) / [SWE-agent](https://github.com/SWE-agent/SWE-agent) (Princeton / Stanford) | ~100-line bash-only baseline scoring >74% on SWE-bench Verified. The harness everyone ablates against; also the harness behind the SWE-bench "bash only" leaderboard. | GitHub, papers, SWE-bench Slack |
 | [OpenHands/OpenHands](https://github.com/OpenHands/OpenHands) | Production-grade, Docker-sandboxed, best-documented internal design (context condensation, prompt-injection mitigation, `openhands-sdk`). | GitHub, Slack, docs |
-| [sst/opencode](https://github.com/sst/opencode) | Popular TUI agent, provider-agnostic, large plugin surface. | GitHub, Discord |
-| [block/goose](https://github.com/block/goose) (Block) | Extensible desktop/CLI agent with MCP-first tooling. | GitHub, Discord |
+| [anomalyco/opencode](https://github.com/anomalyco/opencode) (formerly `sst/opencode`) | ~209k stars. Popular TUI agent, provider-agnostic, large plugin surface. [code-yeongyu/oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) (OmO, ~69k stars) is the orchestration layer most people run on top of it; note it is source-available under a Sustainable Use License, not permissive OSS. | GitHub, Discord |
+| [aaif-goose/goose](https://github.com/aaif-goose/goose) (formerly `block/goose`; moved to its own org) | Extensible desktop/CLI agent with MCP-first tooling, Rust. | GitHub, Discord |
+| [openai/codex](https://github.com/openai/codex) | Codex CLI is open source (Rust), unlike Claude Code and Cursor. Read it for how a vendor harness handles sandboxing, approvals and compaction; it is also the harness NexAU-AHE and HarnessTax benchmark against. | GitHub |
+| [PrimeIntellect-ai/prime-agent](https://github.com/PrimeIntellect-ai/prime-agent) (Prime Intellect) | ~21k stars. Recursive delegation through a persistent Python environment, context treated as data. Paired with [verifiers](https://github.com/PrimeIntellect-ai/verifiers) for RL environments. New contributions are routed through Discussions. | GitHub Discussions |
 | [langchain-ai/deepagents](https://github.com/langchain-ai/deepagents) | ~30k stars, tagline "the batteries-included agent harness". Included because it shows framework vendors have adopted the vocabulary; it is a library, not a CLI. | GitHub |
 | [context-labs/whip](https://github.com/context-labs/whip) | Single-binary Go harness built for open-weight models. Representative of a small wave of Go/Rust rewrites ([thClaws](https://github.com/thClaws/thClaws), [goclaw](https://github.com/nextlevelbuilder/goclaw)). | GitHub |
 
@@ -69,21 +71,25 @@ These are the projects where the loop, tools, context policy and stop conditions
 | [loopx-project/loopx](https://github.com/loopx-project/loopx) | Long-horizon control plane across Codex, Claude Code and others. |
 | [AMAP-ML/LongHorizon-Harness](https://github.com/AMAP-ML/LongHorizon-Harness) (Alibaba AMAP) | Fresh-context execution, durable verified state, independent auditing over Claude Code / Codex / OpenClaw. |
 | [Q00/ouroboros](https://github.com/Q00/ouroboros) | Budgeted evolution loop with staged evaluation across 14 runtimes. |
+| [gastownhall/gascity](https://github.com/gastownhall/gascity), [gastown](https://github.com/gastownhall/gastown), [beads](https://github.com/gastownhall/beads) (Steve Yegge) | Durable task state, supervision, handoffs and agent fleets composed from reusable primitives. Beads is the work-state store; Gas City is the newer composable layer. |
 | [ruvnet/metaharness](https://github.com/ruvnet/metaharness), [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | Scaffold your own branded harness; swarm orchestration. High star counts, treat claims with the usual care. |
 | [FailproofAI/failproofai](https://github.com/FailproofAI/failproofai) | Observability and policy enforcement across harnesses. |
 
 ## Layer 2: Config layer on top of runtimes
 
-Claude Code, Codex CLI and Cursor are closed products whose behaviour is heavily shaped by user-supplied files. This layer is enormous and shallow: thousands of repos, almost no shared evaluation.
+Claude Code and Cursor are closed products; Codex CLI is open source. In practice all three are driven through user-supplied files rather than by changing the loop. This layer is enormous and shallow: thousands of repos, almost no shared evaluation.
 
-**Footnote on "closed".** Claude Code's npm package shipped a `cli.js.map` with `sourcesContent`, exposing roughly 4,700 TypeScript files. Independent anatomy projects now document the full harness: [whanyu1212/claude-code-anatomy](https://github.com/whanyu1212/claude-code-anatomy), [HaiDong-Once/claude-code-map](https://github.com/HaiDong-Once/claude-code-map), [fattail4477/claw-decode](https://github.com/fattail4477/claw-decode), plus the long-running [Piebald-AI/claude-code-system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts) (515 prompts tracked across 284 versions, updated within minutes of each release). Codex CLI is open source. Cursor remains closed. So the "closed CLI" harnesses are readable even if not modifiable, and the anatomy repos are now primary sources for harness design patterns.
+**Footnote on "closed".** Claude Code's npm package shipped a `cli.js.map` with `sourcesContent`, exposing roughly 4,700 TypeScript files, and a handful of small anatomy repos (e.g. [fattail4477/claw-decode](https://github.com/fattail4477/claw-decode)) walk through it. The durable primary source is [Piebald-AI/claude-code-system-prompts](https://github.com/Piebald-AI/claude-code-system-prompts) (515 prompts tracked across 284 versions, updated within minutes of each release). Cursor remains closed. So the "closed CLI" harnesses are readable even if not modifiable.
+
+The same pattern exists on the *open* runtimes, and it is where the more interesting Layer 2 work is: a pi package author's working repo often contains a complete, opinionated harness. Examples worth reading: [mitsuhiko/agent-stuff](https://github.com/mitsuhiko/agent-stuff) (Armin Ronacher's full pi setup), [davebcn87/pi-autoresearch](https://github.com/davebcn87/pi-autoresearch) (try / measure / keep-or-revert loop as a pi extension), [weijiafu14/pi2dsh](https://github.com/weijiafu14/pi2dsh) (pi's extension interface reimplemented on DeepSeek Harness, with a published compatibility matrix), [fitchmultz/pi-tool-duration](https://github.com/fitchmultz/pi-tool-duration) (one tiny intervention: expose tool latency to the model). Small interventions like the last one are the easiest things to actually A/B with the protocol in [`benchmarking.md`](benchmarking.md).
 
 | Hub | What it is |
 |---|---|
-| [sadsfae/awesome-claude-code](https://github.com/sadsfae/awesome-claude-code) | De facto index of skills, hooks, slash commands, orchestrators, `CLAUDE.md` examples. |
+| [sadsfae/awesome-claude-code](https://github.com/sadsfae/awesome-claude-code) | De facto index of skills, hooks, slash commands, orchestrators, `CLAUDE.md` examples. Not pushed to since 2026-03; the Layer 2 churn has moved to ClawHub, the Hermes skills hub and superpowers. |
 | [Chat2AnyLLM/awesome-claude-plugins](https://github.com/Chat2AnyLLM/awesome-claude-plugins) | Metadata catalog of Claude Code plugin marketplaces. |
 | [sergeykrin9/awesome-claude-code-workflows](https://github.com/sergeykrin9/awesome-claude-code-workflows) | Methodologies, memory systems, `CLAUDE.md`/`HANDOFF.md` templates. |
 | [obra/superpowers](https://github.com/obra/superpowers) (Jesse Vincent) | The most-installed skill pack across Claude Code, Hermes and OpenClaw. Worth reading as the canonical example of a Layer 2 harness that travels. |
+| [open-gsd/gsd-core](https://github.com/open-gsd/gsd-core) | "Get Shit Done": planning, fresh-context handoffs and verification packaged as executable workflow. Successor to the archived `gsd-build/get-shit-done`; search results still point at the old repo. |
 | [BioInfo/claudelicious](https://github.com/BioInfo/claudelicious), [maxritter/pilot-shell](https://github.com/maxritter/pilot-shell), [first-fluke/oh-my-agent](https://github.com/first-fluke/oh-my-agent), [revfactory/harness](https://github.com/revfactory/harness) | Complete wired-together setups with reasoning: spec-driven, TDD gates, stop-hook verification, independent judges. Models for how to publish a harness rather than a snippet. |
 | [harnessprotocol/harness-kit](https://github.com/harnessprotocol/harness-kit), [hgflima/harness-lab](https://github.com/hgflima/harness-lab), [madebywild/agent-harness](https://github.com/madebywild/agent-harness), [eooo-io/orkestr](https://github.com/eooo-io/orkestr) | Portable registries / package managers for harness assets across CLIs. harness-kit has the spec behind it; nobody has won this yet. |
 | Cursor rules / Codex `AGENTS.md` collections | Same pattern, smaller. Search GitHub for `path:.cursor/rules` or `filename:AGENTS.md`. |
@@ -100,7 +106,7 @@ Claude Code, Codex CLI and Cursor are closed products whose behaviour is heavily
 | [walkinglabs/learn-harness-engineering](https://github.com/walkinglabs/learn-harness-engineering) | ~15k stars. 12 lessons, 6 projects, 14 languages. The on-ramp most newcomers use. Sister list: [walkinglabs/awesome-harness-engineering](https://github.com/walkinglabs/awesome-harness-engineering). |
 | [RyanAlberts/best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) | 100+ harnesses, rescored weekly, exposed as MCP server and `llms.txt`. The only *ranked* list. |
 | [Turi-Labs/awesome-harness](https://github.com/Turi-Labs/awesome-harness), [Lijunjie2/awesome-agent-harness](https://github.com/Lijunjie2/awesome-agent-harness), [Picrew/awesome-agent-harness](https://github.com/Picrew/awesome-agent-harness) | Overlapping lists; Lijunjie2 is EN/ZH. |
-| [nexu-io/harness-engineering-guide](https://github.com/nexu-io/harness-engineering-guide) ([harness-guide.com](https://harness-guide.com)) | Structured guide with active GitHub Discussions. |
+| [nexu-io/harness-engineering-guide](https://github.com/nexu-io/harness-engineering-guide) ([harness-guide.com](https://harness-guide.com)) | Structured guide (loop, tools, memory, guardrails, eval infra). Was the closest thing to a forum in Q1 2026; the repo has not been pushed to since 2026-04-19, so treat it as a reference, not a venue. |
 | Ryan Lopopolo's "Harness Engineering" repo | 12 theses, 3 adoption procedures and a source library, packaged as an `AGENTS.md`-routed context bundle. The author of the OpenAI field report, in long form. |
 | [lobehub/awesome-rsi](https://github.com/lobehub/awesome-rsi) | Research map of recursive self-improvement including harnesses; the adjacent field. |
 | Anthropic engineering blog | "Effective harnesses for long-running agents" (Nov 2025), "Harness design for long-running application development" (Mar 2026; notes that Opus 4.6 needed *less* scaffolding than 4.5), and [Quantifying infrastructure noise](https://www.anthropic.com/engineering/infrastructure-noise). Primary sources. |
@@ -131,6 +137,8 @@ This is now a distinct sub-field and the most active research hotspot. All of th
 | [SoL-Pi](https://arxiv.org/abs/2609.20519) (NVIDIA; [code](https://github.com/NVlabs/SoL-Pi)) | Auto-research loops over pi discovered four efficiency mechanisms (action fusion, observation handles, evidence-preserving log reduction, online compaction). Shipped as an opt-in pi extension. NVIDIA offers to benchmark community PRs on a reporting cycle. |
 | [Rethinking the Evaluation of Harness Evolution for Agents](https://arxiv.org/abs/2607.12227) | The critique. Under matched feedback and inference budgets, automatic harness evolution does not consistently beat simple test-time scaling, and evolved harnesses generalise poorly to held-out tasks. Any evolution claim needs a held-out split and a test-time-scaling control arm. |
 | ACE, TF-GRPO | Prompt/context-evolution baselines that AHE compares against; both underperform component-level evolution. |
+| [Adaptive Auto-Harness](https://arxiv.org/abs/2606.01770) ([code](https://github.com/A-EVO-Lab/AdaptiveHarness)) | Sustained self-improvement on open-ended task *streams* rather than a fixed benchmark. Reference artifact; repo quiet since June. |
+| Optimizers you can run today: [gepa-ai/gepa](https://github.com/gepa-ai/gepa) (reflective prompt/program evolution, the engine behind `hermes-agent-self-evolution`), [airbnb/agent-harness-optimizer](https://github.com/airbnb/agent-harness-optimizer) (system prompt + tool-call middleware, reproducible configs), [better-harness](https://github.com/QoderAI/better-harness) (below) | None of these ship the held-out split or the test-time-scaling control for you. Add both before believing the number. |
 | [TokenRhythm/NeoHorse](https://github.com/TokenRhythm/NeoHorse), [CosmosMind-ai/RSI-Harness](https://github.com/CosmosMind-ai/RSI-Harness) | Early recursive-self-improvement-via-harness projects (post-training with a routing harness; pi + versioned "genome" config). Watch, do not cite yet. |
 
 ### Experiment platforms
@@ -138,7 +146,7 @@ This is now a distinct sub-field and the most active research hotspot. All of th
 | Project | What it does |
 |---|---|
 | [QoderAI/better-harness](https://github.com/QoderAI/better-harness) | "Define harnesses as code, run controlled experiments, inspect evidence, compare outcomes." Closest existing product to the protocol in [`benchmarking.md`](benchmarking.md). |
-| [Harbor](https://www.harborframework.com), [Claw-SWE-Bench](https://github.com/opensquilla/claw-swe-bench), [HAL harness](https://github.com/princeton-pli/hal-harness) | Runners. See [`benchmarking.md`](benchmarking.md). |
+| [Harbor](https://www.harborframework.com), [Claw-SWE-Bench](https://github.com/TokenRhythm/claw-swe-bench), [HAL harness](https://github.com/princeton-pli/hal-harness) (archived 2026-07) | Runners. See [`benchmarking.md`](benchmarking.md). |
 | vals.ai Terminal-Bench 2.1 board | Re-runs models under a unified Terminus-2 harness. Fixed harness, vary model. |
 | [LHTB](https://huggingface.co/datasets/IntelligenceLab/LHTB-leaderboard) (Long-Horizon Terminal-Bench) | Records the harness per entry and segregates non-Terminus runs into a `custom-harness` folder outside the ranking. The right disclosure pattern. |
 | cliwatch.com | Evaluates model+harness pairs against *your* CLI's docs and behaviour. |
@@ -165,7 +173,7 @@ A starting list for an X/Mastodon/Bluesky list. Maintainers and paper authors fi
 
 There is no single venue. In rough order of signal density:
 
-1. GitHub issues, PRs and Discussions on pi, oh-my-pi, deepseek-harness, OpenHands, mini-swe-agent, harness-engineering-guide, meta-harness.
+1. GitHub issues, PRs and Discussions on pi, oh-my-pi, deepseek-harness, prime-agent, OpenHands, mini-swe-agent, meta-harness, gepa. The highest-signal unit is a single *design PR* whose body states the question it is testing (a cache-warming policy, a fast/slow model router, a plugin veto/timeout semantics); see the PR searches in [`monitoring.md`](monitoring.md).
 2. X / Mastodon. Search `harness engineering`, `agent harness`, `loop engineering`, `scaffold effect`, `harness tax`; follow the people above.
 3. Project Discords: DeepSeek Harness, OpenClaw, Hermes, oh-my-pi, OpenCode, Goose; Slacks: OpenHands, SWE-bench.
 4. Hacker News threads on each new paper (HarnessTax, Empirical Study, OpenAI post, "Harnesses Explained") are where practitioners argue methodology.
@@ -177,6 +185,7 @@ There is no single venue. In rough order of signal density:
 
 - **Topic tagging is gamed.** `harness-engineering` is on a 91k-star RAG engine, a macOS proxy app and a Xiaohongshu scraper; `dsh-plugin` is on an image uploader and a resume builder. Never rank by topic alone; require the keyword in the description or README.
 - **Star counts on 2026 repos are inflated** by the OpenClaw and DSH waves. Prefer commit velocity, issue-close rate and whether trajectories or ablations are published.
-- **GitHub redirects renamed repos silently.** `badlogic/pi-mono` still resolves; a digest script will keep "working" while reporting the wrong canonical name.
+- **GitHub redirects renamed repos silently.** `badlogic/pi-mono`, `sst/opencode` and `block/goose` all still resolve; a digest script will keep "working" while reporting the wrong canonical name. `scripts/check_sources.py` in this repo fails on exactly this.
+- **An enabled Discussions tab is not a community.** Check `pushed_at` before calling anything a venue; `harness-engineering-guide` had Discussions enabled and no pushes for five months.
 
 See [`monitoring.md`](monitoring.md) for how to watch these on a cadence.

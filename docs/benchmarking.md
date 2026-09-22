@@ -94,7 +94,7 @@ This applies to anything produced by a Meta-Harness, AHE, SoL-Pi, ouroboros or h
 1. **Hold out tasks.** Split the task set before the first iteration. Evolve on the development split only. Report the held-out split as the headline number. If you only have one public benchmark, evolve on one benchmark and report on another (AHE evolved on TB2 and reported transfer to SWE-bench Verified; that is the right shape).
 2. **Add a matched-budget test-time-scaling control.** Harness evolution is a search that spends inference on feedback. Give the *seed* harness the same total inference budget as the evolution campaign spent, via best-of-n, retries or self-consistency at task time, and compare against that, not against a single-shot seed. If the evolved harness does not beat the scaled seed on the held-out split, the evolution found a benchmark-specific configuration, not a better harness.
 
-Also disclose the proposer model (Meta-Harness and AHE both use a frontier model as the evolving agent), the number of iterations and candidates, and the total tokens spent on the campaign. Those belong in the Harness Card.
+Also disclose the proposer model (Meta-Harness and AHE both use a frontier model as the evolving agent), the number of iterations and candidates, and the total tokens spent on the campaign. Those belong in the *Provenance* section of the [Harness Card](../templates/HARNESS_CARD.md), and the control numbers in the evolved-harness table of [`RESULTS.md`](../templates/RESULTS.md).
 
 ## Tooling that exists today
 
@@ -126,7 +126,7 @@ Terminal-Bench is terminal-task heavy (bio, security, systems), not repo-editing
 
 ### Claw-SWE-Bench (SWE-bench with a harness-neutral adapter)
 
-[opensquilla/claw-swe-bench](https://github.com/opensquilla/claw-swe-bench) makes arbitrary harnesses comparable on SWE-bench Verified / Multilingual by fixing the prompt, workspace contract, patch extraction and evaluator. Adding a harness is one `BaseClawAdapter` subclass plus a registry entry. Use the 80-task **Lite** subset for iteration and the 350-task full set for claims.
+[TokenRhythm/claw-swe-bench](https://github.com/TokenRhythm/claw-swe-bench) makes arbitrary harnesses comparable on SWE-bench Verified / Multilingual by fixing the prompt, workspace contract, patch extraction and evaluator. Adding a harness is one `BaseClawAdapter` subclass plus a registry entry. Use the 80-task **Lite** subset for iteration and the 350-task full set for claims.
 
 ```bash
 python3 run_infer.py \
@@ -147,7 +147,7 @@ The runner enforces the fairness properties for you: identical prompt, no networ
 
 ### HAL harness
 
-[princeton-pli/hal-harness](https://github.com/princeton-pli/hal-harness): framework-agnostic wrapper with Weave cost tracking across SWE-bench Verified Mini, USACO, tau-bench, CORE-bench and more. The leaderboard is paused for new models but the harness works and its cost accounting is the best of the three.
+[princeton-pli/hal-harness](https://github.com/princeton-pli/hal-harness): framework-agnostic wrapper with Weave cost tracking across SWE-bench Verified Mini, USACO, tau-bench, CORE-bench and more. **Archived 2026-07-01** along with the paused leaderboard. Still worth reading for how to do per-run cost accounting properly (it was the best of the three at it), but do not build a new comparison on it; copy the accounting into a Harbor or HarnessRouter run instead.
 
 ### better-harness (experiments as code)
 
