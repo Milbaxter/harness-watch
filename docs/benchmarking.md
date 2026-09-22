@@ -126,7 +126,7 @@ Terminal-Bench is terminal-task heavy (bio, security, systems), not repo-editing
 
 ### Claw-SWE-Bench (SWE-bench with a harness-neutral adapter)
 
-[opensquilla/claw-swe-bench](https://github.com/opensquilla/claw-swe-bench) makes arbitrary harnesses comparable on SWE-bench Verified / Multilingual by fixing the prompt, workspace contract, patch extraction and evaluator. Adding a harness is one `BaseClawAdapter` subclass plus a registry entry. Use the 80-task **Lite** subset for iteration and the 350-task full set for claims.
+[TokenRhythm/claw-swe-bench](https://github.com/TokenRhythm/claw-swe-bench) (the `opensquilla/claw-swe-bench` path redirects here) makes arbitrary harnesses comparable on SWE-bench Verified / Multilingual by fixing the prompt, workspace contract, patch extraction and evaluator. Adding a harness is one `BaseClawAdapter` subclass plus a registry entry. Use the 80-task **Lite** subset for iteration and the 350-task full set for claims.
 
 ```bash
 python3 run_infer.py \
@@ -147,11 +147,15 @@ The runner enforces the fairness properties for you: identical prompt, no networ
 
 ### HAL harness
 
-[princeton-pli/hal-harness](https://github.com/princeton-pli/hal-harness): framework-agnostic wrapper with Weave cost tracking across SWE-bench Verified Mini, USACO, tau-bench, CORE-bench and more. The leaderboard is paused for new models but the harness works and its cost accounting is the best of the three.
+[princeton-pli/hal-harness](https://github.com/princeton-pli/hal-harness): framework-agnostic wrapper with Weave cost tracking across SWE-bench Verified Mini, USACO, tau-bench, CORE-bench and more. The README now says the repository is archived and the leaderboard is no longer updated through this harness. The cost-accounting code is still the reference for how a runner should record dollars.
 
-### better-harness (experiments as code)
+### better-harness (read the session, do not run the trial)
 
-[QoderAI/better-harness](https://github.com/QoderAI/better-harness) lets you define harness variants as code, run controlled experiments, and inspect evidence per task. Aimed at Claude Code / Codex / Cursor config-layer variants, which is exactly gap 2 in [`providers.md`](providers.md). Newer and less battle-tested than Harbor; useful for the config-layer A/B where Harbor is overkill.
+[QoderAI/better-harness](https://github.com/QoderAI/better-harness), README as fetched 2026-09-22, is a session auditor. It runs inside a host you already use (Claude Code, Codex, Cursor, Copilot, Pi, and others) and turns that host's transcripts into a prioritised report. It is the tool for gap 2 in [`providers.md`](providers.md) when the question is "what did this config change do in real sessions?". It is not a runner that holds the model fixed and emits a comparable trajectory. Harbor is that runner.
+
+### Which arms Harbor can actually launch
+
+Harbor's installed-agent tree, read 2026-09-22, wraps Claude Code, Codex, Gemini CLI, Goose, Hermes, mini-swe-agent, OpenCode, OpenHands, the OpenHands SDK, and pi. It does not wrap DeepSeek Harness, ZCode, deepagents, or Prime Agent. The current Terminal-Bench dataset tag in the 4.0 README is `terminal-bench/terminal-bench@latest`, with `-k 5`. The edit contract is not the same across the agents people compare (pi matches exact `oldText`; oh-my-pi defaults to hashline and is not yet a Harbor installed agent; mini-swe-agent has no edit tool), and that difference has a larger published effect than most pass-rate gaps. Pin it on the Harness Card. The matrix and the paper effects are in [`reports/2026-09-22-mechanism-scan.md`](../reports/2026-09-22-mechanism-scan.md).
 
 ### Minimal control arms
 

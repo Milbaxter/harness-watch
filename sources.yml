@@ -57,12 +57,14 @@ github_repos:
   - repo: OpenHands/OpenHands
     layer: runtime
     watch: [releases]
-  - repo: sst/opencode
+  - repo: anomalyco/opencode
     layer: runtime
     watch: [releases]
-  - repo: block/goose
+    note: Formerly sst/opencode; GitHub redirects the old path.
+  - repo: aaif-goose/goose
     layer: runtime
     watch: [releases]
+    note: Formerly block/goose; GitHub redirects the old path.
   - repo: langchain-ai/deepagents
     layer: runtime
     watch: [releases]
@@ -124,19 +126,19 @@ github_repos:
   - repo: QoderAI/better-harness
     layer: infra
     watch: [releases]
-    note: Harnesses as code, controlled experiments; config-layer A/B.
+    note: Session auditor over host transcripts (README 2026-09-22), not a trial runner.
   - repo: Qihoo360/harness-bench
     layer: eval
     watch: [releases]
     note: Fixed-model, vary-harness; 6 harnesses x 8 models x 106 tasks.
-  - repo: opensquilla/claw-swe-bench
+  - repo: TokenRhythm/claw-swe-bench
     layer: eval
     watch: [releases, pulls]
-    note: Harness-neutral SWE-bench adapter; leaderboard at claw-swe-bench.github.io.
+    note: Formerly opensquilla/claw-swe-bench (redirects). Adapters openclaw, hermes, nanobot, zeroclaw, generic.
   - repo: princeton-pli/hal-harness
     layer: infra
     watch: [releases]
-    note: Cost-aware eval harness; leaderboard paused for new models.
+    note: README says the repository is archived and the leaderboard is no longer updated through this harness.
   - repo: zli12321/LHTB
     layer: eval
     watch: [commits]
@@ -150,6 +152,32 @@ github_repos:
   - repo: namanvats/scaffold-effects
     layer: eval
     watch: [commits]
+
+
+  - repo: openai/codex
+    layer: runtime
+    watch: [releases]
+    note: Apache-2.0 CLI. apply_patch; seatbelt / landlock / bubblewrap. Harbor installed agent.
+  - repo: google-gemini/gemini-cli
+    layer: runtime
+    watch: [releases]
+    note: Loop detection in source; headless JSON and JSONL. Harbor installed agent.
+  - repo: OpenHands/software-agent-sdk
+    layer: runtime
+    watch: [releases]
+    note: SDK harness (stuck detector, file_editor, condenser). Separate from the OpenHands app repo.
+  - repo: PrimeIntellect-ai/prime-agent
+    layer: runtime
+    watch: [releases, discussions]
+    note: RLM REPL and /refine over durable harness state. README says it is not a sandbox. No Harbor adapter as of 2026-09-22.
+  - repo: skillsynchq/txcript
+    layer: infra
+    watch: [releases]
+    note: Converts a live session among Claude Code, Codex and OpenCode. Continuation, not an eval trajectory.
+  - repo: harbor-framework/terminal-bench
+    layer: eval
+    watch: [releases]
+    note: Dataset README current as of 2026-09-22 is Terminal-Bench 4.0. Run tag terminal-bench/terminal-bench@latest, k=5.
 
   # Layer 3: curation
   - repo: ai-boost/awesome-harness-engineering
@@ -416,9 +444,9 @@ chat:
   - name: oh-my-pi Discord
     via: link in README of can1357/oh-my-pi
   - name: OpenCode Discord
-    via: link in README of sst/opencode
+    via: link in README of anomalyco/opencode
   - name: Goose Discord
-    via: link in README of block/goose
+    via: link in README of aaif-goose/goose
   - name: OpenHands Slack
     via: link in README of OpenHands/OpenHands
   - name: SWE-bench Slack

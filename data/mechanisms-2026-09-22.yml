@@ -1,0 +1,198 @@
+# Mechanism matrix observed 2026-09-22 from repo docs and source.
+# Absent keys were not opened. Do not treat absence as "the harness lacks the feature".
+# Pair with reports/2026-09-22-mechanism-scan.md.
+
+observed: "2026-09-22"
+
+runners:
+  harbor:
+    repo: harbor-framework/harbor
+    trajectory: ATIF
+    installed_agents:
+      - claude-code
+      - codex
+      - gemini-cli
+      - goose
+      - hermes
+      - mini-swe-agent
+      - opencode
+      - openhands
+      - openhands-sdk
+      - pi
+    source: src/harbor/agents/installed/
+    note: Public ATIF doc lists a shorter set than this tree.
+  claw_swe_bench:
+    repo: TokenRhythm/claw-swe-bench
+    redirects_from: opensquilla/claw-swe-bench
+    adapters: [openclaw, hermes, nanobot, zeroclaw, generic]
+    patch_collection: runner-side git diff
+  harnessrouter:
+    repo: HarnessRouter/harnessrouter
+    event_schema: claude-code stream-json
+    backends_in_runner_comment: [claude, codex, hermes, dsh, pi]
+  hal:
+    repo: princeton-pli/hal-harness
+    status: archived
+  qihoo_harness_bench:
+    repo: Qihoo360/harness-bench
+    adapters: [openclaw, picoclaw, nanobot, fairyclaw, demo]
+  better_harness:
+    repo: QoderAI/better-harness
+    kind: session-auditor
+    not: experiment-runner
+  txcript:
+    repo: skillsynchq/txcript
+    converts_sessions_among: [claude-code, codex, opencode]
+    produces_eval_trajectory: false
+
+harnesses:
+  pi:
+    repo: earendil-works/pi
+    package: "@earendil-works/pi-coding-agent"
+    version_in_tree: "0.87.0"
+    license: MIT
+    default_tools: [read, write, edit, bash]
+    edit: {contract: oldText/newText, matched_against: original file}
+    compaction: {trigger: "contextTokens > contextWindow - reserveTokens", reserve_tokens: 16384, keep_recent_tokens: 20000}
+    max_turns: not_found
+    sandbox: none
+    session: {path: "~/.pi/agent/sessions/", format: jsonl-tree-v3}
+    headless: ["-p", "--mode json", "--mode rpc"]
+    reports_cost: true
+    harbor_agent: pi
+    sources:
+      - docs/compaction.md
+      - docs/security.md
+      - docs/session-format.md
+      - packages/coding-agent edit.ts
+  oh_my_pi:
+    repo: can1357/oh-my-pi
+    package: "@oh-my-pi/pi-coding-agent"
+    version_in_tree: "18.2.8"
+    edit: {default: hashline, also: [apply_patch, patch, replace]}
+    approval_default: yolo
+    approval_modes: [always-ask, write, yolo]
+    memory_default: off
+    memory_backends: [off, local, hindsight, mnemopi, sharpshooter]
+    todo_tool: true
+    subagents: task tool, batch, optional isolation
+    retry: stopReason error, except context overflow which compacts
+    sources:
+      - docs/edit-tool.md
+      - docs/approval-mode.md
+      - docs/memory.md
+      - docs/todo-tool.md
+      - docs/task-tool.md
+      - docs/non-compaction-retry-policy.md
+  deepseek_harness:
+    repo: deepseek-ai/deepseek-harness
+    version_in_tree: "0.1.7-alpha.1"
+    license: MIT
+    default_edit: [read, write, edit]
+    opt_in_edit: str_replace_editor
+    shell: bash-sandbox on macOS/Linux; PowerShell ACL sandbox on Windows
+    web_fetch: public destinations only, no per-call approval
+    loop: ReactLoopAgent
+    max_turns: not_found_in_agent_loop_readme
+    parallel_tools: maxParallelToolCalls
+    headless: "dsh --profile headless --json"
+    dollar_cost: not_found
+    harbor_agent: false
+    harnessrouter_backend: dsh
+  zcode:
+    repo: zai-org/ZCode
+    version_in_tree: "3.14.0"
+    license: Apache-2.0
+    edit: read-before-edit state machine
+    max_turns: deliberately none; stop on compact, cancel, permission, timeout, truncation, retry cap
+    session: {path: "~/.zcode/cli/db/db.sqlite", format: sqlite}
+    hooks: [SessionStart, UserPromptSubmit, PreToolUse, PermissionRequest, PostToolUse, PostToolUseFailure, Stop]
+    harbor_agent: false
+  mini_swe_agent:
+    repo: SWE-agent/mini-swe-agent
+    action_space: bash tool (v2 default)
+    step_limit_in_mini_yaml: 0
+    cost_limit_in_mini_yaml: 3
+    harbor_agent: mini-swe-agent
+  hermes:
+    repo: NousResearch/hermes-agent
+    license: MIT
+    max_turns_default: 500
+    subagent_iteration_cap_default: 50
+    session: {format: sqlite, path: state.db}
+    trajectory_export: sharegpt jsonl
+    harbor_agent: hermes
+    claw_swe_bench_adapter: hermes
+  openhands_sdk:
+    repo: OpenHands/software-agent-sdk
+    license: MIT
+    tools: [terminal, file_editor, task_tracker]
+    file_editor_commands: [view, create, str_replace, insert, undo_edit]
+    stuck_detection: [action_observation, action_error, monologue, alternating]
+    condenser: {kind: llm_summarizing, max_size_events: 240}
+    harbor_agent: openhands-sdk
+  gemini_cli:
+    repo: google-gemini/gemini-cli
+    license: Apache-2.0
+    loop_detection: {tool_call_threshold: 5, content_threshold: 10, llm_confidence: 0.9}
+    headless: [json, streaming jsonl]
+    harbor_agent: gemini-cli
+  goose:
+    repo: aaif-goose/goose
+    formerly: block/goose
+    license: Apache-2.0
+    permission_modes: [auto, smart_approve, approve, chat]
+    compaction: fraction of context limit
+    harbor_agent: goose
+  codex:
+    repo: openai/codex
+    license: Apache-2.0
+    edit_tool: apply_patch
+    sandbox: [seatbelt, landlock, bubblewrap]
+    compaction: separate pre-turn and mid-turn paths
+    harbor_agent: codex
+  opencode:
+    repo: anomalyco/opencode
+    formerly: sst/opencode
+    license: MIT
+    compaction: overflow prune plus summary
+    harbor_agent: opencode
+  deepagents:
+    repo: langchain-ai/deepagents
+    version_in_tree: "0.7.17"
+    license: MIT
+    kind: library
+    memory: AGENTS.md injected from ~/.deepagents and ./.deepagents
+    read_tools_confirmed: [ls, read_file, glob, grep]
+    harbor_agent: false
+  prime_agent:
+    repo: PrimeIntellect-ai/prime-agent
+    license: MIT
+    source_depth: readme_only
+    delegation: rlm.spawn
+    sandbox: none (README warning)
+    refine: "/refine edits durable harness state, not the base system prompt"
+    harbor_agent: false
+
+evidence:
+  - knob: edit format
+    sources: ["https://blog.can.ac/2026/02/12/the-harness-problem/", "https://arxiv.org/abs/2606.12344"]
+    direction: large positive for native/hashline edits versus emitted diffs
+  - knob: typed tools vs bash-only
+    sources: ["https://arxiv.org/abs/2609.20804"]
+    direction: helps weak models; bash-only can be better and cheaper for a strong model
+  - knob: explicit plan tool
+    sources: ["https://arxiv.org/abs/2609.20804"]
+    direction: accuracy for weak models, cost saving without accuracy for strong models
+  - knob: compaction
+    sources: ["https://arxiv.org/abs/2609.20804", "https://arxiv.org/abs/2609.20519"]
+    direction: overflow prevention; recall of elided text was a no-op
+  - knob: prompt-only evolution
+    sources: ["https://arxiv.org/abs/2604.25850", "https://arxiv.org/abs/2607.12227"]
+    direction: negative or overfit
+  - knob: harness evolution vs parallel sampling
+    sources: ["https://arxiv.org/abs/2607.12227"]
+    direction: no held-out gain under a matched budget
+  - knob: sandbox headroom
+    sources: ["https://www.anthropic.com/engineering/infrastructure-noise"]
+    direction: "+6 pp and fewer infra errors versus a hard 1x limit"
