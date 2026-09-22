@@ -15,11 +15,13 @@ How to stay on top of the open-source **agent harness** ecosystem, and how to te
 | [`docs/landscape.md`](docs/landscape.md) | Where the ecosystem actually lives (standards, runtimes, config layer, curation, research, regional communities, people). |
 | [`docs/monitoring.md`](docs/monitoring.md) | How to scan GitHub, npm, arXiv, HN, Hugging Face, Discords and X on a fixed cadence without drowning. |
 | [`docs/benchmarking.md`](docs/benchmarking.md) | How to compare *your* harness against *Joe's* in a way that survives scrutiny, including if yours was auto-evolved. |
+| [`reports/2026-09-22-mechanism-scan.md`](reports/2026-09-22-mechanism-scan.md) | What each open harness implements, which of those knobs have a measured effect, and which pairs Harbor can drive. |
+| [`data/mechanisms-2026-09-22.yml`](data/mechanisms-2026-09-22.yml) | The same matrix, machine-readable, for pre-filling a Harness Card. |
 | [`docs/providers.md`](docs/providers.md) | Who is running fixed-model harness benchmarks today, and what is still missing. |
 | [`sources.yml`](sources.yml) | Machine-readable watchlist: repos, feeds, queries, accounts. |
 | [`templates/HARNESS_CARD.md`](templates/HARNESS_CARD.md) | Disclosure template you should publish alongside any score. |
 | [`templates/RESULTS.md`](templates/RESULTS.md) | Results template for a harness-vs-harness comparison. |
-| [`reports/`](reports/) | Dated research: [landscape survey](reports/2026-09-22-hotspot-survey.md), [participation field notes](reports/2026-09-22-community-field-notes.md), and [PR status evidence](reports/2026-09-22-community-evidence.json), all September 22. |
+| [`reports/`](reports/) | Dated research: [landscape survey](reports/2026-09-22-hotspot-survey.md), [participation field notes](reports/2026-09-22-community-field-notes.md), and [PR status evidence](reports/2026-09-22-community-evidence.json), all September 22. The [mechanism scan](reports/2026-09-22-mechanism-scan.md) is the internals and measurability note; it is not another map of who is building what. |
 
 ## The two questions this repo exists to answer
 
@@ -34,7 +36,7 @@ Partially. HarnessTax (UC Berkeley Sky Lab + Arena.ai, 2026-09-16) is the first 
 
 ## Status
 
-Snapshot as of 2026-09-22. The landscape moves monthly; PRs that fix stale links or add sources are welcome. Everything here is opinionated and unaffiliated with any of the projects mentioned.
+Snapshot as of 2026-09-22. The landscape moves monthly; PRs that fix stale links or add sources are welcome. Edit-tool defaults, turn caps and the Terminal-Bench tag in the mechanism scan are the fields most likely to rot first. Everything here is opinionated and unaffiliated with any of the projects mentioned.
 
 ## License
 
