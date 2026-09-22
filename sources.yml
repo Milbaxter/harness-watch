@@ -85,6 +85,18 @@ github_repos:
     note: Budgeted evolution loop across 14 runtimes.
 
   # Layer 3: automated harness design (research code)
+  - repo: NousResearch/hermes-agent-self-evolution
+    layer: research
+    watch: [pulls, commits]
+    note: Dedicated skill-evolution pipeline; broader phases proposed in PR 162, not merged as of 2026-09-22. See participation field notes.
+  - repo: gepa-ai/gepa
+    layer: research
+    watch: [releases, discussions, pulls]
+    note: Trace-driven optimization of prompts, code and other text parameters; issue 390 and merged PR 462 form a useful experiment-to-fix history.
+  - repo: stanfordnlp/dspy
+    layer: research
+    watch: [releases, discussions]
+    note: GEPA integration and broader program optimization; follow relevant experiments, not every framework change.
   - repo: stanford-iris-lab/meta-harness
     layer: research
     watch: [releases, commits]
@@ -393,12 +405,14 @@ hacker_news_searches:
   - 'meta-harness'
 
 chat:
+  - name: GEPA Discord
+    via: https://discord.gg/WXFSeVGdbW
   - name: DeepSeek Harness Discord
     via: link in README of deepseek-ai/deepseek-harness
   - name: OpenClaw Discord
     via: link in README of openclaw/openclaw
   - name: Hermes Agent Discord
-    via: link in README of NousResearch/hermes-agent
+    via: https://discord.gg/NousResearch
   - name: oh-my-pi Discord
     via: link in README of can1357/oh-my-pi
   - name: OpenCode Discord
@@ -444,3 +458,19 @@ x_accounts_seed:
   - PiebaldAI
   - NousResearch
   - deepseek_ai
+  - LakshyAAAgrawal
+  - lateinteraction
+
+# Manual research bookmarks, not GitHub notification subscriptions or automations.
+# Recheck state at visit time; closed does not imply merged.
+participation_threads:
+  - url: https://github.com/gepa-ai/gepa/issues/390
+    note: Independent reproduction exposes incomplete candidates.
+  - url: https://github.com/gepa-ai/gepa/pull/462
+    note: Merged replacement fix; supersedes closed-unmerged PRs 435 and 460.
+  - url: https://github.com/NousResearch/hermes-agent-self-evolution/pull/162
+    note: Open proposal with several rounds of evaluation and boundary review.
+  - url: https://github.com/NousResearch/hermes-agent-self-evolution/issues/186
+    note: Skill discovery and routing as an evaluation gap.
+  - url: https://github.com/NVlabs/SoL-Pi/pull/27
+    note: Open reducer eligibility fix, with reproduction and contributor review history.

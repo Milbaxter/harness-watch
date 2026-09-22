@@ -1,5 +1,7 @@
 # Monitoring: how to stay on top of it
 
+For a focused route into participation, use [Start here: watch, understand, contribute](participate.md). It starts with GEPA and Nous, follows three concrete experiment histories and keeps community memberships, posts and paid experiments explicit. The [September 22 field report](../reports/2026-09-22-community-field-notes.md) adds the dedicated Hermes evolution project and GEPA/DSPy to this repo's original map.
+
 The problem is not lack of information, it is that the signal is spread over six surfaces with different update rates, and since 2026-08 the volume on two of them (GitHub topics, Discord) has gone up by an order of magnitude. The approach below is a fixed cadence per surface plus a small set of saved queries, with explicit noise filters. Budget: about 30 minutes a week once set up.
 
 ## Principles
@@ -34,13 +36,13 @@ Standards: `HarnessRouter/harnessrouter`, `harnessprotocol/harness-protocol`.
 
 Core runtimes: `deepseek-ai/deepseek-harness`, `earendil-works/pi`, `can1357/oh-my-pi`, `openclaw/openclaw`, `NousResearch/hermes-agent`, `zai-org/ZCode`, `SWE-agent/mini-swe-agent`, `OpenHands/OpenHands`, `sst/opencode`, `block/goose`.
 
-Automated harness design: `stanford-iris-lab/meta-harness`, `NVlabs/SoL-Pi`.
+Automated harness design: `stanford-iris-lab/meta-harness`, `NVlabs/SoL-Pi`, `NousResearch/hermes-agent-self-evolution`, `gepa-ai/gepa`, `stanfordnlp/dspy`.
 
 Benchmarks and eval infra: `harbor-framework/harbor`, `harbor-framework/terminal-bench-2-1` (and successors), `QoderAI/better-harness`, `Qihoo360/harness-bench`, `opensquilla/claw-swe-bench`, `princeton-pli/hal-harness`, `zli12321/LHTB`.
 
 Curation: `ai-boost/awesome-harness-engineering`, `RyanAlberts/best-of-Agent-Harnesses`, `nexu-io/harness-engineering-guide` (Discussions), `Piebald-AI/claude-code-system-prompts` (commits; one per Claude Code release).
 
-Use GitHub's per-repo "Custom" watch and tick only Releases and Discussions. Everything else is noise. For `deepseek-harness` and `openclaw`, Discussions alone will be high-volume; skim the pinned and announcement categories only.
+For broad monitoring, use GitHub's per-repo "Custom" watch for Releases and Discussions where available. For participation, also follow a few selected experimental issues and PRs: this is where failures, revisions and acceptance become visible. Avoid all-activity subscriptions. For `deepseek-harness` and `openclaw`, Discussions alone can be high-volume; select relevant categories and threads.
 
 ### Saved repository searches
 

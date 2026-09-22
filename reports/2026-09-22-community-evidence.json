@@ -1,0 +1,83 @@
+{
+  "observed_at_utc": "2026-09-22 10:08:48 UTC",
+  "method": "GitHub REST API; public pull-request metadata only. Not an independent experiment reproduction.",
+  "pull_requests": [
+    {
+      "author": "overgoy",
+      "base_sha": "b265bf9ca77fd8e8d82039d9f74911b8780fe1ce",
+      "head_sha": "4a41d69a0c4eec55760eb24f25374fdc890fb4e2",
+      "merged": false,
+      "merged_at": null,
+      "state": "closed",
+      "title": "fix(reflection): skip a truncated reflection output instead of adopting it as a candidate",
+      "updated_at": "2026-09-21T21:51:24Z",
+      "url": "https://github.com/gepa-ai/gepa/pull/435"
+    },
+    {
+      "author": "sethkimmel3",
+      "base_sha": "15ee314f9c7d34ec153b809d401f42f55c4dcd76",
+      "head_sha": "d1e927d1ba5130ba4f085b6bcb0609ecb1febff7",
+      "merged": false,
+      "merged_at": null,
+      "state": "closed",
+      "title": "Reject malformed reflection fences",
+      "updated_at": "2026-09-21T21:49:52Z",
+      "url": "https://github.com/gepa-ai/gepa/pull/460"
+    },
+    {
+      "author": "LakshyAAAgrawal",
+      "base_sha": "d771eb21b5dd3228bc3f567293d2ccfc423fc900",
+      "head_sha": "cfd334985ce43b0a3934fc38d7ddbfafdbe88441",
+      "merged": true,
+      "merged_at": "2026-09-21T21:43:48Z",
+      "state": "closed",
+      "title": "docs: credit @overgoy and @sethkimmel3 for reflection truncation work",
+      "updated_at": "2026-09-21T21:43:48Z",
+      "url": "https://github.com/gepa-ai/gepa/pull/465"
+    },
+    {
+      "author": "MaxFreedomPollard",
+      "base_sha": "0a929e3aa20e15cf04dc7c28492a7d41a5139125",
+      "head_sha": "dee3c8833aaaaf2eec2f1d2c5a788f7082d7b115",
+      "merged": false,
+      "merged_at": null,
+      "state": "open",
+      "title": "feat: complete Phases 2-5 (tool descriptions, prompt sections, code evolution, continuous loop)",
+      "updated_at": "2026-09-11T04:12:39Z",
+      "url": "https://github.com/NousResearch/hermes-agent-self-evolution/pull/162"
+    },
+    {
+      "author": "neurosovereign",
+      "base_sha": "0a929e3aa20e15cf04dc7c28492a7d41a5139125",
+      "head_sha": "3aaf0a6a2e335bb2b8aed51e4f5a7ce6f3d5096b",
+      "merged": false,
+      "merged_at": null,
+      "state": "closed",
+      "title": "fix: GEPA 3.2.x compatibility + symlink resolver + validator false-positive",
+      "updated_at": "2026-09-19T20:16:02Z",
+      "url": "https://github.com/NousResearch/hermes-agent-self-evolution/pull/142"
+    },
+    {
+      "author": "LakshyAAAgrawal",
+      "base_sha": "30f709de556c076cf2631cbadc3b1cc7fd25b459",
+      "head_sha": "358d6134d47bc8120c39077432990926f618ddc3",
+      "merged": true,
+      "merged_at": "2026-09-21T21:35:11Z",
+      "state": "closed",
+      "title": "fix(reflection): reject known-incomplete proposals without breaking compatibility",
+      "updated_at": "2026-09-21T21:35:11Z",
+      "url": "https://github.com/gepa-ai/gepa/pull/462"
+    },
+    {
+      "author": "kaluli123123",
+      "base_sha": "8daac782feab843d6d0e52e1ec732775d7692001",
+      "head_sha": "b73c99a4250a6bdf64cf143f6cedc2b8e983c09f",
+      "merged": false,
+      "merged_at": null,
+      "state": "open",
+      "title": "fix(reducer): enforce the cargo subcommand restriction in DIAGNOSTIC_COMMAND",
+      "updated_at": "2026-09-22T08:33:21Z",
+      "url": "https://github.com/NVlabs/SoL-Pi/pull/27"
+    }
+  ]
+}

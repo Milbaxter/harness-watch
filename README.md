@@ -8,6 +8,10 @@ How to stay on top of the open-source **agent harness** ecosystem, and how to te
 
 | Doc | What it answers |
 |---|---|
+| **[`docs/participate.md`](docs/participate.md)** | **Start here to take part:** five communities, contribution norms, a two-week reading path and a completion checklist. |
+| [`reports/2026-09-22-community-field-notes.md`](reports/2026-09-22-community-field-notes.md) | Five developments, three experiment histories, five people and three open questions, with proposed versus merged work distinguished. |
+| [`drafts/trace-evidence-discussion.md`](drafts/trace-evidence-discussion.md) | A contribution draft connecting GEPA and SoL-Pi; prepared for review, not posted. |
+| [`experiments/trace-evidence-pilot.md`](experiments/trace-evidence-pilot.md) | A future evidence-retention experiment with baseline, cases, limits and estimated cost; not run. |
 | [`docs/landscape.md`](docs/landscape.md) | Where the ecosystem actually lives (standards, runtimes, config layer, curation, research, regional communities, people). |
 | [`docs/monitoring.md`](docs/monitoring.md) | How to scan GitHub, npm, arXiv, HN, Hugging Face, Discords and X on a fixed cadence without drowning. |
 | [`docs/benchmarking.md`](docs/benchmarking.md) | How to compare *your* harness against *Joe's* in a way that survives scrutiny, including if yours was auto-evolved. |
@@ -15,7 +19,7 @@ How to stay on top of the open-source **agent harness** ecosystem, and how to te
 | [`sources.yml`](sources.yml) | Machine-readable watchlist: repos, feeds, queries, accounts. |
 | [`templates/HARNESS_CARD.md`](templates/HARNESS_CARD.md) | Disclosure template you should publish alongside any score. |
 | [`templates/RESULTS.md`](templates/RESULTS.md) | Results template for a harness-vs-harness comparison. |
-| [`reports/`](reports/) | Dated hotspot surveys; the raw findings behind each revision of the docs. Latest: [2026-09-22](reports/2026-09-22-hotspot-survey.md). |
+| [`reports/`](reports/) | Dated research: [landscape survey](reports/2026-09-22-hotspot-survey.md), [participation field notes](reports/2026-09-22-community-field-notes.md), and [PR status evidence](reports/2026-09-22-community-evidence.json), all September 22. |
 
 ## The two questions this repo exists to answer
 

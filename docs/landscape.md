@@ -1,5 +1,7 @@
 # The landscape
 
+**Participation update, 2026-09-22:** the [community field report](../reports/2026-09-22-community-field-notes.md) adds [GEPA](https://github.com/gepa-ai/gepa), [DSPy](https://github.com/stanfordnlp/dspy) and [Hermes Agent Self-Evolution](https://github.com/NousResearch/hermes-agent-self-evolution), and traces proposed changes through review and adoption. For a practical first two weeks, start with the [participation guide](participate.md).
+
 The word "harness" is used for four different things. The people working on each layer mostly do not read each other. Knowing which layer you care about tells you where to look.
 
 ```
