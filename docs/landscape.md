@@ -103,7 +103,7 @@ Claude Code, Codex CLI and Cursor are closed products whose behaviour is heavily
 | [nexu-io/harness-engineering-guide](https://github.com/nexu-io/harness-engineering-guide) ([harness-guide.com](https://harness-guide.com)) | Structured guide with active GitHub Discussions. |
 | Ryan Lopopolo's "Harness Engineering" repo | 12 theses, 3 adoption procedures and a source library, packaged as an `AGENTS.md`-routed context bundle. The author of the OpenAI field report, in long form. |
 | [lobehub/awesome-rsi](https://github.com/lobehub/awesome-rsi) | Research map of recursive self-improvement including harnesses; the adjacent field. |
-| Anthropic engineering blog | [Effective harnesses for long-running agents](https://www.anthropic.com/engineering) (Nov 2025), [Harness design for long-running application development](https://www.anthropic.com/engineering) (Mar 2026), [Quantifying infrastructure noise](https://www.anthropic.com/engineering/infrastructure-noise). Primary sources. |
+| Anthropic engineering blog | "Effective harnesses for long-running agents" (Nov 2025), "Harness design for long-running application development" (Mar 2026; notes that Opus 4.6 needed *less* scaffolding than 4.5), and [Quantifying infrastructure noise](https://www.anthropic.com/engineering/infrastructure-noise). Primary sources. |
 | [OpenAI: Harness engineering](https://openai.com/index/harness-engineering/) (Ryan Lopopolo, 2026-02-11) | The field report that gave the discipline its name in public. ~1M lines, 0 hand-written, 1,500 automated PRs. |
 | [thedeepfeed.ai: Measuring the agent harness](https://www.thedeepfeed.ai/posts/2026-06-22-how-much-is-the-harness-worth-measuring-agent-scaffolds/) | Best single synthesis of the 2026 harness-effect papers up to June. |
 
